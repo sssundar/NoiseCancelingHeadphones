@@ -1,0 +1,22 @@
+
+
+NET "led[0]" LOC = J14;
+NET "led[1]" LOC = J15;
+NET "led[2]" LOC = K15;
+NET "led[3]" LOC = K14;
+NET "led[4]" LOC = E16;
+NET "led[5]" LOC = P16;
+NET "led[6]" LOC = E4;
+NET "led[7]" LOC = P4;
+NET "button" LOC = B18;
+NET "sys_clk" LOC = B8;
+
+
+NET "pmod" LOC = L15;
+
+
+NET "pmod" IOSTANDARD = LVCMOS25;
+
+# PlanAhead Generated IO constraints 
+
+NET "pmod" PULLUP;

@@ -1,0 +1,81 @@
+September 21, 2015
+Sushant Sundaresh
+Headphone s/w and digital Design
+------------------------------------
+
+1) Expect 0-3V input. Analog filter kills DC, then op-amps scale and add DC in at the very end via a coupling capacitor. 
+This is the input to the DAC. Use only 1x 200kHz DAC, and every 1/40000 s, create FSM to get 4 separate channels. 
+
+ISSUE: These channels will be slightly phase shifted. I have not tested this. 
+ISSUE: Unknown scale. Mics -> pre-amps appropriately offset -> ADC. Get 10 bit values, take top 8 bits? Take middle 8 bits? Check with LEDs and normal sounds. 
+
+
+2) Therefore the input to my filter will be, at 40kHz sampling, 4 numbers between 0-255, unsigned. 
+
+3) All of these will be converted to Sbbbbbbb signed numbers by subtracting 128 so my filter can update without worrying about killing a dc component.
+They will then be shifted into an input history array of length K. (K parallel serial shifters, where K is the # filter coefficients)
+This array will then be copied to a 'multiplier' array. 
+
+Two are error signals and we convert them to signed numbers so we can take an absolute value away from zero.
+They will be added in an absolute value adder with 8+log2(K) bits unsigned result. No overflow is possible since only 2K additions will be performed before clearing the error.
+
+4) These signed numbers will be processed as follows: 
+multiplied by a signed power of two in +/- 0.5 -> 0.0039 (2^-1 to 2^-8) represented as Sbbbbbbbb, a 9 bit number. 
+First we'll shift, truncating at 0. The numbers only get smaller, remember. 
+Then we'll deal with sign by possibly negating the result. 
+Then we will shift all K of these serially into an accumulator, sign extending, adding normally in two's complement with 5 extended bits + sign, and truncating on full overflow or underflow. 
+Then we will add 128 to return the DC component, and truncate further to 0-255. 
+
+5) Once every 2*K 40KHz cycles, we temporarily break from this. We need to update our filter coefficients. We need to store:
+best filter coefficients 
+best error
+current error (add every cycle, clear on these update sequences)
+
+We simply compare the best error to the current error, and whichever is larger, we keep those coefficients in best filter coefficients.
+We then update the filter coefficients in the currernt filter array using the current value of the 2*K bit max-length LFSR.
+
+This can actually happen in-step with the rest if it's all fast enough. This is the ideal case. 
+
+6) This will be passed to a DAC oversampling 32x (roughly 1.28 MHz divided off our clock.)
+
+7) The DAC output will be DC-zero'd, amplified (set manually to match scale of input for same # range) and output to a speaker. 
+
+ISSUE: How do I set a clock speed? I need to divide off of something known. I suppose I could make a general counter and change what it flags on based on routing.
+
+8) I need three clocks: 1 at 40kHz, 1 at 1.28MHz, and the rest of the system needs about .. 14 types of FSMs to control when values update on the main clock.
+
+9) I need a 16 bit counter for 1 second intervals, and a 3 bit counter to count to 5 (seconds) to terminate when the user presses a button (sanitize with synchronizer but 
+run on first edge, ignore otherwise).
+
+10) want one button for start updating filter, one for stop updating filter, one for reset filter (and residual) and seed lfsr, one for enable/disable toggle output.
+
+
+# Design Conclusions
+1) Input 8 bits, 0-255. Remove DC component. 
+2) LFSR XNOR maximal seeded just fine.
+3) Filter length 32 required for now.
+4) 1/8 precision required in filter multiplications. Addition should preserve them till the end then add 128 and truncate to an integer in 0, 255.
+5) This should be sent to the DAC. 
+6) Filtering should update for at least 40 seconds. 
+7) abs(error - 128) + currentResidual is a good metric for error.
+8) Powers-of-two filter just fine for now.
+
+
+# Functions (FSMs)
+#  FSM 1 (ADC req/ack)
+#  FSMs 2-8 (level-shift) (serial shift-in from DAC) (copy input and filter coefficients) (multiply-shift) (serial-shift to accumulator) (filter accumulator) (filter level-shift/truncator)
+#  FSM 9-10 (serial shift-in from DAC) (error absolute value accumulator) 
+#  FSM 11-13 (compare errors) (store best filter coefficients & copy to current filter coefficients during FSM 5-8) (update filter coefficients (disable lfsr) during FSM 5-8 cycle)
+#  FSM 14 (store in dac/run dac)
+
+# Timing Estimates
+# Suspect clock not an issue - say need 40kHz & 1.28 MHz. Then need 16bit and 6 bit adders. 2x 16 bit adders (add, compare) will be rate limiting in all cases for a single-clock operation.
+# Suppose have 16 bit adder in 1 clock running at 25 MHz. Then easily can get ~1.28 MHz clock, roughly by dividing by 16. Then oversampling more! Similarly can pick nice number like 512 and 25 MHz / 512 is a bit less than 50 KHz. That's cutting the edge of our ADC which could sample 4 things at 200kHz in that time, so we'd have to run a bit slower, but the point is we'd get close to the clock #s we want.
+# The worst case timing in this example is 32 x 9 bit shifts and additions for the filter accumulator. so say < 600 clocks. So as long as our base clock for 16 bit additions is about 25 MHz, we're totally in the clear for doing <=600 shifts/<=32 additions in about 7-800 clocks and still getting > 40KHz sampling and being done before the next sampling window.
+
+
+# Sizing Estimates
+Roughly speaking, for K = 32, we have 4 x 8 bit DAC storage, 2x (32 x 9 bit + 8 bit filter storage x 2 + 32 x 9 bit best filter storage + 16 bits x 3 accumulator storage + 8 bits DAC storage + 9 bits DAC comparator)
+which is roughly 32 + 2 (1200 + 300 + 50 + 20) = 32 + 3200 = 3200 DFFs just for storage. Associated FSM + logic elements will at least quadruple that. So.. 13000 DFF-level logic elements, optimistically.
+The Nexys 2 Spartan 3E-1200 has.. 500K gates. We're not going to run out of room.
+
