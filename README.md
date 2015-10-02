@@ -1,2 +1,2 @@
 # NoiseCancelingHeadphones
-Caltech EE119C Spring 2015 Digital Design Project
+Digital Design Project, EE119C, Caltech, Spring & Summer 2015
