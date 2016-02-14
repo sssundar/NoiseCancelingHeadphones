@@ -1,0 +1,64 @@
+Plan
+----
+
+Tesla Demo - 6 hours tops, but at noon hard stop.
+Lunch
+CS - 5+ hours 
+Tesla Presentation - 2 hours (as a break)
+Dinner
+Car Rev A - ADC, I2C, ... place, test. See Dan's code.
+E11 review - 15'', word-pdf edit.
+Check Amma's wake timing. Sleep 6 hours beforehand.
+
+health, google+study, tesla+study, job search, and trips put off.
+
+Demo Plan
+---------
+
+Sunday
+------
+DAC system s/w test -> works. 
+DAC system h/w test with LED instead of PMOD JA1 -> works
+Leave PMOD test till later, maybe try a few other PMOD ports and check with a scope.
+
+ADC design review
+
+Monday
+------
+implement, test 
+ADC system test in s/w 
+
+Floorplanning
+
+DAC system test in h/w with PMOD 
+ADC system test in h/w (set up adc on breadboard, sample periodically 4 pots, drive led's, buttons set channels)
+
+Preamp parts list + schematic 
+Postamp parts list + schematic 
+
+Tuesday
+------
+Build pre/post amps (x4, x2)
+Build mic/headphone setup
+
+Verify pre-amp in lab with ADC system test.
+Verify post-amp with DAC system test in h/w (get caps, small R from lab)
+
+Wednesday, Thursday 
+-------------------
+Full system wiring + review. 
+Full system test in h/w.
+
+ADC 
+---
+Notes:
+	Need to latch and display on some pins the 2 MSB to make sure we aren't hitting them during calibration.
+	Takes 5 V supply, so use 5V to 3.3 V converter.
+	Use soldered male pins for PMOD connections.
+	0-5 V / 1024 and wanting 255 LSB means we want 0-1.25V centered at 0.5 V as "128," the DC bias.
+		Use a 5 V LDO off the 9V rail for the ADC
+	Let's make the pre-amp run off the 9V supply and AC couple things, and run the mics off the 3.3 LDO on board
+
+Verify timing diagram for FSM including logic level conversion
+
+
