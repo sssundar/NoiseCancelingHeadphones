@@ -1,0 +1,6 @@
+vhdl isim_temp "AddSub.vhd"
+vhdl isim_temp "kBitCounter.vhd"
+vhdl isim_temp "generator_sine.vhd"
+vhdl isim_temp "dac_single.vhd"
+vhdl isim_temp "test_dac_wiring.vhd"
+vhdl isim_temp "test_test_dac_wiring.vhd"

@@ -1,0 +1,546 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: test_dac_hardware.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "test_dac_hardware.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "test_dac_hardware"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : test_dac_hardware
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/AddSub.vhd" in Library work.
+Architecture dataflow of Entity addsub is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/clock_divider.vhd" in Library work.
+Architecture behavioral of Entity clock_divider is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd" in Library work.
+Architecture dataflow of Entity kbitcounter is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/generator_sine.vhd" in Library work.
+Architecture dataflow of Entity generator_sine is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/dac_single.vhd" in Library work.
+Architecture dataflow of Entity dac_single is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" in Library work.
+Entity <test_dac_hardware> compiled.
+Entity <test_dac_hardware> (Architecture <structural>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <test_dac_hardware> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <clock_divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 4
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 19
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 24
+
+Analyzing hierarchy for entity <generator_sine> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <dac_single> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <test_dac_hardware> in library <work> (Architecture <structural>).
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 123: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clock_divider'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 123: Unconnected output port 'CLK0_OUT' of component 'clock_divider'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 132: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 144: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 158: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 195: Unconnected output port 'accumulator_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 195: Unconnected output port 'internal_sample_state' of component 'dac_single'.
+Entity <test_dac_hardware> analyzed. Unit <test_dac_hardware> generated.
+
+Analyzing Entity <clock_divider> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKFX_DIVIDE =  5" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <clock_divider>.
+Entity <clock_divider> analyzed. Unit <clock_divider> generated.
+
+Analyzing generic Entity <kBitCounter.1> in library <work> (Architecture <dataflow>).
+	k = 4
+Entity <kBitCounter.1> analyzed. Unit <kBitCounter.1> generated.
+
+Analyzing Entity <AddSub> in library <work> (Architecture <dataflow>).
+Entity <AddSub> analyzed. Unit <AddSub> generated.
+
+Analyzing generic Entity <kBitCounter.2> in library <work> (Architecture <dataflow>).
+	k = 19
+Entity <kBitCounter.2> analyzed. Unit <kBitCounter.2> generated.
+
+Analyzing generic Entity <kBitCounter.3> in library <work> (Architecture <dataflow>).
+	k = 24
+Entity <kBitCounter.3> analyzed. Unit <kBitCounter.3> generated.
+
+Analyzing Entity <generator_sine> in library <work> (Architecture <dataflow>).
+Entity <generator_sine> analyzed. Unit <generator_sine> generated.
+
+Analyzing Entity <dac_single> in library <work> (Architecture <dataflow>).
+Entity <dac_single> analyzed. Unit <dac_single> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <AddSub>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/AddSub.vhd".
+    Found 1-bit xor3 for signal <SumDiff>.
+    Found 1-bit xor2 for signal <bEffective>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <AddSub> synthesized.
+
+
+Synthesizing Unit <clock_divider>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/clock_divider.vhd".
+Unit <clock_divider> synthesized.
+
+
+Synthesizing Unit <kBitCounter_1>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 4-bit register for signal <internal_count>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <kBitCounter_1> synthesized.
+
+
+Synthesizing Unit <kBitCounter_2>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 19-bit register for signal <internal_count>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <kBitCounter_2> synthesized.
+
+
+Synthesizing Unit <kBitCounter_3>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 24-bit register for signal <internal_count>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <kBitCounter_3> synthesized.
+
+
+Synthesizing Unit <generator_sine>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/generator_sine.vhd".
+WARNING:Xst:646 - Signal <carries<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <PresentState>.
+    Found 8-bit register for signal <wave_sample>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <generator_sine> synthesized.
+
+
+Synthesizing Unit <dac_single>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/dac_single.vhd".
+WARNING:Xst:646 - Signal <accum_carries<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit register for signal <accumulator>.
+    Found 8-bit register for signal <dac_sample>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <dac_single> synthesized.
+
+
+Synthesizing Unit <test_dac_hardware>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd".
+    Found 1-bit register for signal <hz_pulse_latched>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <test_dac_hardware> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 8
+ 1-bit register                                        : 2
+ 11-bit register                                       : 1
+ 19-bit register                                       : 1
+ 24-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Xors                                                 : 148
+ 1-bit xor2                                            : 74
+ 1-bit xor3                                            : 74
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 76
+ Flip-Flops                                            : 76
+# Xors                                                 : 148
+ 1-bit xor2                                            : 74
+ 1-bit xor3                                            : 74
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <test_dac_hardware> ...
+
+Optimizing unit <kBitCounter_1> ...
+
+Optimizing unit <kBitCounter_2> ...
+
+Optimizing unit <kBitCounter_3> ...
+
+Optimizing unit <generator_sine> ...
+
+Optimizing unit <dac_single> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block test_dac_hardware, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 76
+ Flip-Flops                                            : 76
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : test_dac_hardware.ngr
+Top Level Output File Name         : test_dac_hardware
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 196
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 15
+#      LUT2_D                      : 1
+#      LUT2_L                      : 6
+#      LUT3                        : 41
+#      LUT3_D                      : 2
+#      LUT3_L                      : 3
+#      LUT4                        : 85
+#      LUT4_D                      : 23
+#      LUT4_L                      : 8
+#      MUXF5                       : 8
+# FlipFlops/Latches                : 76
+#      FDE                         : 18
+#      FDR                         : 47
+#      FDRE                        : 11
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 7
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 4
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                       98  out of   8672     1%  
+ Number of Slice Flip Flops:             76  out of  17344     0%  
+ Number of 4 input LUTs:                187  out of  17344     1%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    250     2%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)         | Load  |
+-----------------------------------+-------------------------------+-------+
+sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 76    |
+-----------------------------------+-------------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 3.611ns (Maximum Frequency: 276.916MHz)
+   Minimum input arrival time before clock: 5.998ns
+   Maximum output required time after clock: 6.179ns
+   Maximum combinational path delay: 6.140ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk_50'
+  Clock period: 3.611ns (frequency: 276.916MHz)
+  Total number of paths / destination ports: 3183 / 116
+-------------------------------------------------------------------------
+Delay:               9.028ns (Levels of Logic = 7)
+  Source:            DAC/accumulator_0 (FF)
+  Destination:       DAC/accumulator_0 (FF)
+  Source Clock:      sys_clk_50 rising 0.4X
+  Destination Clock: sys_clk_50 rising 0.4X
+
+  Data Path: DAC/accumulator_0 to DAC/accumulator_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            15   0.591   1.021  DAC/accumulator_0 (DAC/accumulator_0)
+     LUT4_D:I3->O          5   0.704   0.712  DAC/DACSampGen[4].DACSampX/Mxor_SumDiff_xo<0>11 (DAC/N41)
+     LUT3:I1->O            1   0.704   0.000  DAC/accumulator_mux0000<7>11_SW0_F (N126)
+     MUXF5:I0->O           1   0.321   0.499  DAC/accumulator_mux0000<7>11_SW0 (N80)
+     LUT3_D:I1->O          4   0.704   0.762  DAC/DACAccumGen[4].DACAccumX/Cout1 (DAC/accum_carries<7>)
+     LUT3_D:I0->LO         1   0.704   0.135  DAC/accumulator_mux0000<3>11 (N184)
+     LUT3:I2->O            1   0.704   0.455  DAC/accumulator_mux0000<1>11 (DAC/N5)
+     LUT4:I2->O            1   0.704   0.000  DAC/accumulator_mux0000<0> (DAC/accumulator_mux0000<0>)
+     FDRE:D                    0.308          DAC/accumulator_0
+    ----------------------------------------
+    Total                      9.028ns (5.444ns logic, 3.584ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_50'
+  Total number of paths / destination ports: 118 / 116
+-------------------------------------------------------------------------
+Offset:              5.998ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       DAC/accumulator_0 (FF)
+  Destination Clock: sys_clk_50 rising 0.4X
+
+  Data Path: reset to DAC/accumulator_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            72   1.218   1.310  reset_IBUF (reset_led_OBUF)
+     LUT4:I2->O            1   0.704   0.455  DAC/accumulator_mux0000<0>_SW1 (N64)
+     LUT4:I2->O            1   0.704   0.595  DAC/accumulator_mux0000<0>_SW0_SW0 (N93)
+     LUT4:I0->O            1   0.704   0.000  DAC/accumulator_mux0000<0> (DAC/accumulator_mux0000<0>)
+     FDRE:D                    0.308          DAC/accumulator_0
+    ----------------------------------------
+    Total                      5.998ns (3.638ns logic, 2.360ns route)
+                                       (60.7% logic, 39.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_50'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              6.179ns (Levels of Logic = 2)
+  Source:            DAC/accumulator_0 (FF)
+  Destination:       out_dac (PAD)
+  Source Clock:      sys_clk_50 rising 0.4X
+
+  Data Path: DAC/accumulator_0 to out_dac
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            15   0.591   1.192  DAC/accumulator_0 (DAC/accumulator_0)
+     LUT2:I0->O            1   0.704   0.420  DAC/out_dac1 (out_dac_OBUF)
+     OBUF:I->O                 3.272          out_dac_OBUF (out_dac)
+    ----------------------------------------
+    Total                      6.179ns (4.567ns logic, 1.612ns route)
+                                       (73.9% logic, 26.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               6.140ns (Levels of Logic = 3)
+  Source:            oe (PAD)
+  Destination:       out_dac (PAD)
+
+  Data Path: oe to out_dac
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.526  oe_IBUF (oe_led_OBUF)
+     LUT2:I1->O            1   0.704   0.420  DAC/out_dac1 (out_dac_OBUF)
+     OBUF:I->O                 3.272          out_dac_OBUF (out_dac)
+    ----------------------------------------
+    Total                      6.140ns (5.194ns logic, 0.946ns route)
+                                       (84.6% logic, 15.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.61 secs
+ 
+--> 
+
+Total memory usage is 207144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

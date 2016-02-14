@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sat Feb 13 16:42:44 2016
+# Process ID: 9616
+# Log file: D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/planAhead_run_1/planAhead.log
+# Journal file: D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/pa.fromNetlist.tcl
+startgroup
+set_property package_pin N17 [get_ports oe]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports reset]
+endgroup
+set_property package_pin "" [get_ports [list  sys_clk]]
+set_property slew FAST [get_ports [list out_dac]]
+startgroup
+set_property package_pin L15 [get_ports out_dac]
+endgroup
+set_property package_pin "" [get_ports [list  sys_clk]]
+save_constraints
+close_design

@@ -1,0 +1,21 @@
+
+
+NET "oe" LOC = N17;
+NET "reset" LOC = L13;
+
+
+NET "out_dac" SLEW = FAST;
+
+
+# NET "out_dac" LOC = L15;
+NET "out_dac" LOC = J14;
+
+NET "reset_led" LOC = P16;
+
+NET "oe_led" LOC = E4;
+
+NET "hz_pulse" LOC = J15;
+
+# PlanAhead Generated physical constraints 
+
+NET "sys_clk_50" LOC = B8;

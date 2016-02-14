@@ -1,0 +1,5 @@
+set -tmpdir "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/xst/projnav.tmp"
+set -xsthdpdir "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/xst"
+elaborate
+-ifn generator_sine.prj
+-ifmt mixed
