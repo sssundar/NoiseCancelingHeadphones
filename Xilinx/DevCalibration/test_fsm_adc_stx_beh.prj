@@ -1,0 +1,4 @@
+vhdl isim_temp "AddSub.vhd"
+vhdl isim_temp "kBitCounter.vhd"
+vhdl isim_temp "fsm_adc.vhd"
+vhdl isim_temp "test_fsm_adc.vhd"

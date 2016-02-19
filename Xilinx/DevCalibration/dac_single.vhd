@@ -68,6 +68,10 @@ entity dac_single is
 		reset : in std_logic;
 		-- Outputs
 		out_dac : out std_logic;
+		out_dac1 : out std_logic;
+		out_dac2 : out std_logic;
+		out_dac3 : out std_logic; -- testing
+		
 		-- Outputs for test visibility
 		accumulator_state : out std_logic_vector(0 to 10);
 		internal_sample_state : out std_logic_vector(0 to 7)
@@ -111,6 +115,9 @@ begin
 	
 	-- Output	
 	out_dac <= quantizer when (oe = '1') else '0';
+	out_dac1 <= quantizer when (oe = '1') else '0';
+	out_dac2 <= quantizer when (oe = '1') else '0';
+	out_dac3 <= quantizer when (oe = '1') else '0';
 	
 	-- Sign Extension and Quantizer Logic
 	quantizer <= '0' when (accumulator(0) = '1') else '1';

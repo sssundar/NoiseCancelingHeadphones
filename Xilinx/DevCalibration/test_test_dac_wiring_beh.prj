@@ -1,6 +1,0 @@
-vhdl work "AddSub.vhd"
-vhdl work "kBitCounter.vhd"
-vhdl work "generator_sine.vhd"
-vhdl work "dac_single.vhd"
-vhdl work "test_dac_wiring.vhd"
-vhdl work "test_test_dac_wiring.vhd"

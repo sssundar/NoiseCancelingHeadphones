@@ -37,6 +37,9 @@ entity  test_dac_hardware  is
 		
 		-- a DAC (output) data line.
 		out_dac : out std_logic;
+		out_dac1 : out std_logic;
+		out_dac2 : out std_logic;
+		out_dac3 : out std_logic;
 		
 		-- System Clock
 		sys_clk_50 : in std_logic
@@ -94,6 +97,10 @@ architecture  structural  of  test_dac_hardware  is
 			reset : in std_logic;
 			-- Outputs
 			out_dac : out std_logic;
+			out_dac1 : out std_logic;
+			out_dac2 : out std_logic;
+			out_dac3 : out std_logic; -- testing
+			
 			-- Outputs for test visibility
 			accumulator_state : out std_logic_vector(0 to 10);
 			internal_sample_state : out std_logic_vector(0 to 7)
@@ -203,6 +210,9 @@ begin
 			oe => oe,
 			reset => reset,			
 			out_dac => out_dac,			
+			out_dac1 => out_dac1,	
+			out_dac2 => out_dac2,	
+			out_dac3 => out_dac3,	
 			accumulator_state => open,
 			internal_sample_state => open
 			);	

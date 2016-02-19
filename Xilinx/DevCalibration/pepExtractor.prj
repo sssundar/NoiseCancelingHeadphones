@@ -1,5 +1,3 @@
 work	"AddSub.vhd"
-work	"dac_single.vhd"
-work	"generator_sine.vhd"
+work	"fsm_adc.vhd"
 work	"kBitCounter.vhd"
-work	"test_dac_wiring.vhd"

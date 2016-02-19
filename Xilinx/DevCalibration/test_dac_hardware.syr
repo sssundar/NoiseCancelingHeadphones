@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: test_dac_hardware.prj
 
@@ -145,13 +145,13 @@ Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflo
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <test_dac_hardware> in library <work> (Architecture <structural>).
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 123: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clock_divider'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 123: Unconnected output port 'CLK0_OUT' of component 'clock_divider'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 132: Unconnected output port 'count' of component 'kBitCounter'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 144: Unconnected output port 'count' of component 'kBitCounter'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 158: Unconnected output port 'count' of component 'kBitCounter'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 195: Unconnected output port 'accumulator_state' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 195: Unconnected output port 'internal_sample_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 130: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clock_divider'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 130: Unconnected output port 'CLK0_OUT' of component 'clock_divider'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 139: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 151: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 165: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 202: Unconnected output port 'accumulator_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd" line 202: Unconnected output port 'internal_sample_state' of component 'dac_single'.
 Entity <test_dac_hardware> analyzed. Unit <test_dac_hardware> generated.
 
 Analyzing Entity <clock_divider> in library <work> (Architecture <behavioral>).
@@ -357,7 +357,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 7
+# IOs                              : 10
 
 Cell Usage :
 # BELS                             : 196
@@ -379,10 +379,10 @@ Cell Usage :
 #      FDRE                        : 11
 # Clock Buffers                    : 2
 #      BUFG                        : 2
-# IO Buffers                       : 7
+# IO Buffers                       : 10
 #      IBUF                        : 2
 #      IBUFG                       : 1
-#      OBUF                        : 4
+#      OBUF                        : 7
 # DCMs                             : 1
 #      DCM_SP                      : 1
 =========================================================================
@@ -395,8 +395,8 @@ Selected Device : 3s1200efg320-4
  Number of Slices:                       98  out of   8672     1%  
  Number of Slice Flip Flops:             76  out of  17344     0%  
  Number of 4 input LUTs:                187  out of  17344     1%  
- Number of IOs:                           7
- Number of bonded IOBs:                   7  out of    250     2%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    250     4%  
  Number of GCLKs:                         2  out of     24     8%  
  Number of DCMs:                          1  out of      8    12%  
 
@@ -434,8 +434,8 @@ Speed Grade: -4
 
    Minimum period: 3.611ns (Maximum Frequency: 276.916MHz)
    Minimum input arrival time before clock: 5.998ns
-   Maximum output required time after clock: 6.179ns
-   Maximum combinational path delay: 6.140ns
+   Maximum output required time after clock: 6.346ns
+   Maximum combinational path delay: 6.307ns
 
 Timing Detail:
 --------------
@@ -493,52 +493,52 @@ Offset:              5.998ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_50'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              6.179ns (Levels of Logic = 2)
+Offset:              6.346ns (Levels of Logic = 2)
   Source:            DAC/accumulator_0 (FF)
-  Destination:       out_dac (PAD)
+  Destination:       out_dac1 (PAD)
   Source Clock:      sys_clk_50 rising 0.4X
 
-  Data Path: DAC/accumulator_0 to out_dac
+  Data Path: DAC/accumulator_0 to out_dac1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q            15   0.591   1.192  DAC/accumulator_0 (DAC/accumulator_0)
-     LUT2:I0->O            1   0.704   0.420  DAC/out_dac1 (out_dac_OBUF)
-     OBUF:I->O                 3.272          out_dac_OBUF (out_dac)
+     LUT2:I0->O            4   0.704   0.587  DAC/out_dac11 (out_dac_OBUF)
+     OBUF:I->O                 3.272          out_dac1_OBUF (out_dac1)
     ----------------------------------------
-    Total                      6.179ns (4.567ns logic, 1.612ns route)
-                                       (73.9% logic, 26.1% route)
+    Total                      6.346ns (4.567ns logic, 1.779ns route)
+                                       (72.0% logic, 28.0% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
-Delay:               6.140ns (Levels of Logic = 3)
+Delay:               6.307ns (Levels of Logic = 3)
   Source:            oe (PAD)
-  Destination:       out_dac (PAD)
+  Destination:       out_dac1 (PAD)
 
-  Data Path: oe to out_dac
+  Data Path: oe to out_dac1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.218   0.526  oe_IBUF (oe_led_OBUF)
-     LUT2:I1->O            1   0.704   0.420  DAC/out_dac1 (out_dac_OBUF)
-     OBUF:I->O                 3.272          out_dac_OBUF (out_dac)
+     LUT2:I1->O            4   0.704   0.587  DAC/out_dac11 (out_dac_OBUF)
+     OBUF:I->O                 3.272          out_dac1_OBUF (out_dac1)
     ----------------------------------------
-    Total                      6.140ns (5.194ns logic, 0.946ns route)
-                                       (84.6% logic, 15.4% route)
+    Total                      6.307ns (5.194ns logic, 1.113ns route)
+                                       (82.4% logic, 17.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.61 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.58 secs
  
 --> 
 
-Total memory usage is 207144 kilobytes
+Total memory usage is 215660 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    9 (   0 filtered)

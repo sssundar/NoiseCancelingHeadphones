@@ -1,17 +1,3 @@
-Plan
-----
-
-Tesla Demo - 6 hours tops, but at noon hard stop.
-Lunch
-CS - 5+ hours 
-Tesla Presentation - 2 hours (as a break)
-Dinner
-Car Rev A - ADC, I2C, ... place, test. See Dan's code.
-E11 review - 15'', word-pdf edit.
-Check Amma's wake timing. Sleep 6 hours beforehand.
-
-health, google+study, tesla+study, job search, and trips put off.
-
 Demo Plan
 ---------
 
@@ -25,28 +11,39 @@ ADC design review
 
 Monday
 ------
-implement, test 
-ADC system test in s/w 
+ADC system design - done.
 
-Floorplanning
+Tuesday
+-------
+ADC implement, s/w test (1 hour)
 
+Wednesday
+---------
+
+Floorplanning for:
 DAC system test in h/w with PMOD 
 ADC system test in h/w (set up adc on breadboard, sample periodically 4 pots, drive led's, buttons set channels)
+	(1.5 hours)
 
 Preamp parts list + schematic 
 Postamp parts list + schematic 
+	(30 minutes)
 
-Tuesday
-------
 Build pre/post amps (x4, x2)
+	(1 hour)
 Build mic/headphone setup
+	(1 hour)
 
-Verify pre-amp in lab with ADC system test.
-Verify post-amp with DAC system test in h/w (get caps, small R from lab)
+Verify pre-amp in lab with ADC system test
+	(30 minutes)
+Verify post-amp with DAC system test in h/w
+	(30 minutes)
 
-Wednesday, Thursday 
+Full system wiring + review
+	(1 hour)
+
+Thursday 
 -------------------
-Full system wiring + review. 
 Full system test in h/w.
 
 ADC 
@@ -58,7 +55,11 @@ Notes:
 	0-5 V / 1024 and wanting 255 LSB means we want 0-1.25V centered at 0.5 V as "128," the DC bias.
 		Use a 5 V LDO off the 9V rail for the ADC
 	Let's make the pre-amp run off the 9V supply and AC couple things, and run the mics off the 3.3 LDO on board
+	User resistive divider for INT and the conveter for the data bus (8 bits). 
+	Condfirm the rest, 3.3 will be fine for 5 V inputs?
 
 Verify timing diagram for FSM including logic level conversion
+	Need to modify state diagram.
+
 
 
