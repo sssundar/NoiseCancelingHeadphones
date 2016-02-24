@@ -45,7 +45,7 @@ Setup/Hold to clock sys_clk_50
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-reset       |    7.882(R)|   -2.775(R)|sys_clk_20        |   0.000|
+reset       |    8.461(R)|   -2.242(R)|sys_clk_20        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock sys_clk_50 to Pad
@@ -53,11 +53,11 @@ Clock sys_clk_50 to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-hz_pulse    |    6.413(R)|sys_clk_20        |   0.000|
-out_dac     |    6.765(R)|sys_clk_20        |   0.000|
-out_dac1    |    7.774(R)|sys_clk_20        |   0.000|
-out_dac2    |    7.271(R)|sys_clk_20        |   0.000|
-out_dac3    |    7.249(R)|sys_clk_20        |   0.000|
+hz_pulse    |    5.545(R)|sys_clk_20        |   0.000|
+out_dac     |    7.033(R)|sys_clk_20        |   0.000|
+out_dac1    |    8.042(R)|sys_clk_20        |   0.000|
+out_dac2    |    8.383(R)|sys_clk_20        |   0.000|
+out_dac3    |    7.430(R)|sys_clk_20        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock sys_clk_50
@@ -65,30 +65,30 @@ Clock to Setup on destination clock sys_clk_50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sys_clk_50     |    7.282|         |         |         |
+sys_clk_50     |    6.822|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-oe             |oe_led         |    9.652|
-oe             |out_dac        |    8.085|
-oe             |out_dac1       |    9.094|
-oe             |out_dac2       |    8.591|
-oe             |out_dac3       |    8.569|
+oe             |oe_led         |    9.692|
+oe             |out_dac        |    7.171|
+oe             |out_dac1       |    8.180|
+oe             |out_dac2       |    8.521|
+oe             |out_dac3       |    7.568|
 reset          |reset_led      |    5.938|
 ---------------+---------------+---------+
 
 
-Analysis completed Tue Feb 23 18:24:46 2016 
+Analysis completed Tue Feb 23 18:33:36 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 145 MB
+Peak Memory Usage: 146 MB
 
 
 

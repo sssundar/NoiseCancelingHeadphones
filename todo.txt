@@ -8,11 +8,20 @@ DAC system h/w test with PMOD output - scope verified, but weird periodic spikin
 At PMOD output, 0.1uF cap really, really cleans it up and it looks like a square wave
 but this is a 1/sC filter and introduces significant gain distortion.
 
+Placed 5V LDO on board. Looks like wall adapter output is 12V, not 9V as it says..
+
 Trying 400Hz waveform. Works. 2.56 ms period. with or without 0.1uF cap sounds good.
 Trying 800Hz -> noticed gain distortion. But works.
 
 Rebuilding separate 400, 800 Hz files without 0.1uF 1/sC filter, to see if
-gain distortion disappears.
+gain distortion disappears. Yes. Close enough. 2V p-p for both.
+
+Next step is to do the same for 4 kHz
+Sound level at 255 is definitely loud enough for a first pass. 
+The DAC circuit is validated if 4 kHz works.
+Bug: Ignoring the periodic 1V spiking (we'll deal with it later)
+
+Proceed to ADC. 
 
 Wednesday
 ---------
