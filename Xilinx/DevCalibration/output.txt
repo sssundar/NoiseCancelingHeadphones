@@ -2,8 +2,8 @@ Storage Target: Xilinx Flash/PROM
 Storage Family: Platform Flash
 xcf04s          [4 M]
 FF
-test_dac_hardware
-D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration/
+test_adc_hardware_prom
+D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\
 
 MCS
 No

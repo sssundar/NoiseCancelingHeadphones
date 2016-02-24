@@ -1,8 +1,8 @@
 INTSTYLE=impact
 INFILE=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\impact.xsl
 OUTFILE=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\impact.xsl
-FAMILY=None
-PART=None
+FAMILY=Multiple
+PART=Multiple
 WORKINGDIR=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration
 LICENSE=iMPACT
 USER_INFO=iMPACT
