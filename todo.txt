@@ -1,21 +1,11 @@
 Demo Plan
 ---------
 
-Sunday
-------
-DAC system s/w test -> works. 
-DAC system h/w test with LED instead of PMOD JA1 -> works
-Leave PMOD test till later, maybe try a few other PMOD ports and check with a scope.
-
-ADC design review
-
-Monday
-------
-ADC system design - done.
-
-Tuesday
--------
-ADC implement, s/w test (1 hour)
+DAC system s/w test -> works? Never tested properly..
+DAC system h/w test with LED instead of PMOD JA1 -> works, visually.
+DAC system h/w test with PMOD output - scope verified, but weird periodic spiking 	
+		0.1uF cap really, really cleans it up and it looks like a square wave.
+Trying 400Hz waveform.
 
 Wednesday
 ---------

@@ -146,11 +146,12 @@ begin
 			finalCarry => oversample_tick
 			);
 
-	-- 40 kHz off 20 MHz
-	-- For testing, 160 Hz and send out_dac to an LED. 
+	-- 40 kHz off 20 MHz (19 bit counter)	
+	-- For testing, 160 Hz and send out_dac to an LED (19 bit counter)
+	-- For actual, 9 bit counter
 	FiveTwelveCounter: kBitCounter
-		-- generic map ( k => 9 )
-		generic map ( k => 19 )
+		generic map ( k => 9 )
+		--generic map ( k => 19 )
 		port map (	
 			sys_clk => sys_clk_20,
 			clear => reset,
