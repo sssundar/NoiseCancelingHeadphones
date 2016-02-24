@@ -4,8 +4,15 @@ Demo Plan
 DAC system s/w test -> works? Never tested properly..
 DAC system h/w test with LED instead of PMOD JA1 -> works, visually.
 DAC system h/w test with PMOD output - scope verified, but weird periodic spiking 	
-		0.1uF cap really, really cleans it up and it looks like a square wave.
-Trying 400Hz waveform.
+90Hz (220uF, 8Ohm) output filter (remove DC) + 1.58 MHz high kill filter.
+At PMOD output, 0.1uF cap really, really cleans it up and it looks like a square wave
+but this is a 1/sC filter and introduces significant gain distortion.
+
+Trying 400Hz waveform. Works. 2.56 ms period. with or without 0.1uF cap sounds good.
+Trying 800Hz -> noticed gain distortion. But works.
+
+Rebuilding separate 400, 800 Hz files without 0.1uF 1/sC filter, to see if
+gain distortion disappears.
 
 Wednesday
 ---------

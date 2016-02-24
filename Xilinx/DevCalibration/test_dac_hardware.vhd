@@ -148,7 +148,7 @@ begin
 
 	-- 40 kHz off 20 MHz	
 	FiveTwelveCounter: kBitCounter
-		generic map ( k => 8 )		
+		generic map ( k => 9 )		
 		port map (	
 			sys_clk => sys_clk_20,
 			clear => reset,

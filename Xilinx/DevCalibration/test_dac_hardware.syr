@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: test_dac_hardware.prj
 
@@ -129,7 +129,7 @@ Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <da
 	k = 4
 
 Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
-	k = 8
+	k = 9
 
 Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
 	k = 24
@@ -184,7 +184,7 @@ Analyzing Entity <AddSub> in library <work> (Architecture <dataflow>).
 Entity <AddSub> analyzed. Unit <AddSub> generated.
 
 Analyzing generic Entity <kBitCounter.2> in library <work> (Architecture <dataflow>).
-	k = 8
+	k = 9
 Entity <kBitCounter.2> analyzed. Unit <kBitCounter.2> generated.
 
 Analyzing generic Entity <kBitCounter.3> in library <work> (Architecture <dataflow>).
@@ -228,9 +228,9 @@ Unit <kBitCounter_1> synthesized.
 
 Synthesizing Unit <kBitCounter_2>.
     Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
-    Found 8-bit register for signal <internal_count>.
+    Found 9-bit register for signal <internal_count>.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	inferred   9 D-type flip-flop(s).
 Unit <kBitCounter_2> synthesized.
 
 
@@ -279,10 +279,11 @@ Macro Statistics
  11-bit register                                       : 1
  24-bit register                                       : 1
  4-bit register                                        : 1
- 8-bit register                                        : 3
-# Xors                                                 : 126
- 1-bit xor2                                            : 63
- 1-bit xor3                                            : 63
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Xors                                                 : 128
+ 1-bit xor2                                            : 64
+ 1-bit xor3                                            : 64
 
 =========================================================================
 
@@ -295,11 +296,11 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 65
- Flip-Flops                                            : 65
-# Xors                                                 : 126
- 1-bit xor2                                            : 63
- 1-bit xor3                                            : 63
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+# Xors                                                 : 128
+ 1-bit xor2                                            : 64
+ 1-bit xor3                                            : 64
 
 =========================================================================
 
@@ -329,8 +330,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 65
- Flip-Flops                                            : 65
+# Registers                                            : 66
+ Flip-Flops                                            : 66
 
 =========================================================================
 
@@ -359,22 +360,22 @@ Design Statistics
 # IOs                              : 10
 
 Cell Usage :
-# BELS                             : 173
+# BELS                             : 176
 #      GND                         : 1
 #      INV                         : 3
-#      LUT2                        : 28
+#      LUT2                        : 18
 #      LUT2_L                      : 4
-#      LUT3                        : 28
+#      LUT3                        : 32
 #      LUT3_D                      : 2
-#      LUT3_L                      : 3
-#      LUT4                        : 71
-#      LUT4_D                      : 15
-#      LUT4_L                      : 8
-#      MUXF5                       : 9
+#      LUT3_L                      : 4
+#      LUT4                        : 80
+#      LUT4_D                      : 13
+#      LUT4_L                      : 7
+#      MUXF5                       : 11
 #      VCC                         : 1
-# FlipFlops/Latches                : 65
+# FlipFlops/Latches                : 66
 #      FDE                         : 18
-#      FDR                         : 36
+#      FDR                         : 37
 #      FDRE                        : 11
 # Clock Buffers                    : 2
 #      BUFG                        : 2
@@ -391,9 +392,9 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                       85  out of   8672     0%  
- Number of Slice Flip Flops:             65  out of  17344     0%  
- Number of 4 input LUTs:                162  out of  17344     0%  
+ Number of Slices:                       86  out of   8672     0%  
+ Number of Slice Flip Flops:             66  out of  17344     0%  
+ Number of 4 input LUTs:                163  out of  17344     0%  
  Number of IOs:                          10
  Number of bonded IOBs:                  10  out of    250     4%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -420,7 +421,7 @@ Clock Information:
 -----------------------------------+-------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)         | Load  |
 -----------------------------------+-------------------------------+-------+
-sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 65    |
+sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 66    |
 -----------------------------------+-------------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -431,8 +432,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 3.341ns (Maximum Frequency: 299.330MHz)
-   Minimum input arrival time before clock: 5.811ns
+   Minimum period: 3.369ns (Maximum Frequency: 296.806MHz)
+   Minimum input arrival time before clock: 5.367ns
    Maximum output required time after clock: 6.346ns
    Maximum combinational path delay: 6.307ns
 
@@ -442,10 +443,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sys_clk_50'
-  Clock period: 3.341ns (frequency: 299.330MHz)
-  Total number of paths / destination ports: 2090 / 105
+  Clock period: 3.369ns (frequency: 296.806MHz)
+  Total number of paths / destination ports: 2174 / 106
 -------------------------------------------------------------------------
-Delay:               8.352ns (Levels of Logic = 6)
+Delay:               8.423ns (Levels of Logic = 6)
   Source:            DAC/accumulator_0 (FF)
   Destination:       DAC/accumulator_0 (FF)
   Source Clock:      sys_clk_50 rising 0.4X
@@ -456,22 +457,22 @@ Delay:               8.352ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q            15   0.591   1.021  DAC/accumulator_0 (DAC/accumulator_0)
-     LUT4_D:I3->O          5   0.704   0.808  DAC/DACSampGen[4].DACSampX/Mxor_SumDiff_xo<0>11 (DAC/N41)
-     LUT3:I0->O            1   0.704   0.000  DAC/accumulator_mux0000<7>11_SW1_G (N137)
-     MUXF5:I1->O           1   0.321   0.455  DAC/accumulator_mux0000<7>11_SW1 (N74)
-     LUT3:I2->O            4   0.704   0.587  DAC/DACAccumGen[4].DACAccumX/Cout1 (DAC/accum_carries<7>)
-     MUXF5:S->O            3   0.739   0.706  DAC/accumulator_mux0000<3>11 (DAC/N3)
+     LUT4:I3->O            5   0.704   0.712  DAC/DACSampGen[4].DACSampX/Mxor_SumDiff_xo<0>11 (DAC/N41)
+     LUT3:I1->O            4   0.704   0.622  DAC/DACSampGen[3].DACSampX/Mxor_SumDiff_xo<0>1 (DAC/DACAccumGen[3].DACAccumX/Mxor_bEffective_Result_and0001)
+     LUT4:I2->O            2   0.704   0.622  DAC/accumulator_mux0000<5>11_SW0 (N63)
+     LUT4:I0->O            1   0.704   0.000  DAC/accumulator_mux0000<3>11_F (N132)
+     MUXF5:I0->O           3   0.321   0.706  DAC/accumulator_mux0000<3>11 (DAC/N3)
      LUT4:I0->O            1   0.704   0.000  DAC/accumulator_mux0000<0> (DAC/accumulator_mux0000<0>)
      FDRE:D                    0.308          DAC/accumulator_0
     ----------------------------------------
-    Total                      8.352ns (4.775ns logic, 3.577ns route)
-                                       (57.2% logic, 42.8% route)
+    Total                      8.423ns (4.740ns logic, 3.683ns route)
+                                       (56.3% logic, 43.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_50'
-  Total number of paths / destination ports: 105 / 105
+  Total number of paths / destination ports: 106 / 106
 -------------------------------------------------------------------------
-Offset:              5.811ns (Levels of Logic = 3)
+Offset:              5.367ns (Levels of Logic = 3)
   Source:            reset (PAD)
   Destination:       WaveGen/wave_sample_0 (FF)
   Destination Clock: sys_clk_50 rising 0.4X
@@ -480,13 +481,13 @@ Offset:              5.811ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            43   1.218   1.441  reset_IBUF (reset_led_OBUF)
-     LUT4:I0->O           28   0.704   1.436  WaveGen/PresentState_mux000022 (DAC/accumulator_and0000)
-     LUT3:I0->O            1   0.704   0.000  WaveGen/wave_sample_mux0000<5> (WaveGen/wave_sample_mux0000<5>)
-     FDE:D                     0.308          WaveGen/wave_sample_5
+     IBUF:I->O            59   1.218   1.446  reset_IBUF (reset_led_OBUF)
+     LUT2:I0->O           13   0.704   0.987  WaveGen/PresentState_mux000022 (DAC/accumulator_and0000)
+     LUT4:I3->O            1   0.704   0.000  WaveGen/wave_sample_mux0000<6>1 (WaveGen/wave_sample_mux0000<6>)
+     FDE:D                     0.308          WaveGen/wave_sample_6
     ----------------------------------------
-    Total                      5.811ns (2.934ns logic, 2.877ns route)
-                                       (50.5% logic, 49.5% route)
+    Total                      5.367ns (2.934ns logic, 2.433ns route)
+                                       (54.7% logic, 45.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_50'
@@ -530,12 +531,12 @@ Delay:               6.307ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.56 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.58 secs
  
 --> 
 
-Total memory usage is 213868 kilobytes
+Total memory usage is 214892 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    9 (   0 filtered)
