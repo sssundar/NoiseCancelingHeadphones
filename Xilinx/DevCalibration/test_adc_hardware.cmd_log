@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.xst" -ofn "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.syr" 
+xst -intstyle ise -ifn "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.xst" -ofn "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test_adc_hardware.ucf -p xc3s1200e-fg320-4 test_adc_hardware.ngc test_adc_hardware.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o test_adc_hardware_map.ncd test_adc_hardware.ngd test_adc_hardware.pcf 
+par -w -intstyle ise -ol high -t 1 test_adc_hardware_map.ncd test_adc_hardware.ncd test_adc_hardware.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test_adc_hardware.ucf -p xc3s1200e-fg320-4 test_adc_hardware.ngc test_adc_hardware.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o test_adc_hardware_map.ncd test_adc_hardware.ngd test_adc_hardware.pcf 
+par -w -intstyle ise -ol high -t 1 test_adc_hardware_map.ncd test_adc_hardware.ncd test_adc_hardware.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_adc_hardware.twx test_adc_hardware.ncd -o test_adc_hardware.twr test_adc_hardware.pcf -ucf test_adc_hardware.ucf 
+bitgen -intstyle ise -f test_adc_hardware.ut test_adc_hardware.ncd 

@@ -49,6 +49,45 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="kBitCounter.xst"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_3"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="test_adc_hardware.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_BIN" xil_pn:name="test_adc_hardware.bin"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="test_adc_hardware.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="test_adc_hardware.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="test_adc_hardware.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="test_adc_hardware.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="test_adc_hardware.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="test_adc_hardware.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="test_adc_hardware.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="test_adc_hardware.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="test_adc_hardware.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="test_adc_hardware.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="test_adc_hardware.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="test_adc_hardware.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_adc_hardware.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="test_adc_hardware.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="test_adc_hardware.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="test_adc_hardware.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="test_adc_hardware.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="test_adc_hardware.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="test_adc_hardware.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="test_adc_hardware.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="test_adc_hardware.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="test_adc_hardware.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="test_adc_hardware_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="test_adc_hardware_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="test_adc_hardware_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="test_adc_hardware_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="test_adc_hardware_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_adc_hardware_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_adc_hardware_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="test_adc_hardware_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="test_adc_hardware_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_adc_hardware_par.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="test_adc_hardware_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="test_adc_hardware_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_adc_hardware_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_adc_hardware_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="test_dac_hardware.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_BIN" xil_pn:name="test_dac_hardware.bin"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="test_dac_hardware.bit" xil_pn:subbranch="FPGAConfiguration"/>
@@ -118,6 +157,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="AddSub.vhd"/>
@@ -143,6 +183,7 @@
     <transform xil_pn:end_ts="1455465058" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5092201892148258121" xil_pn:start_ts="1455465058">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1455683613" xil_pn:in_ck="-420513836350684993" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1455683613">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -195,32 +236,32 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1455409957" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-665985272914384235" xil_pn:start_ts="1455409957">
+    <transform xil_pn:end_ts="1456301647" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-226306126290271691" xil_pn:start_ts="1456301647">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1455409957" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5092201892148258121" xil_pn:start_ts="1455409957">
+    <transform xil_pn:end_ts="1456301647" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8674541245155084055" xil_pn:start_ts="1456301647">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1455409957" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1455409957">
+    <transform xil_pn:end_ts="1456301647" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1456301647">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1455413198" xil_pn:in_ck="7190564332804156607" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4100203532226678163" xil_pn:start_ts="1455413198">
+    <transform xil_pn:end_ts="1456301647" xil_pn:in_ck="7190564332804156607" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4539882678850790707" xil_pn:start_ts="1456301647">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="clock_divider.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1455409957" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-5485052969259075108" xil_pn:start_ts="1455409957">
+    <transform xil_pn:end_ts="1456301647" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-5485052969259075108" xil_pn:start_ts="1456301647">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1455409957" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7075821509625905069" xil_pn:start_ts="1455409957">
+    <transform xil_pn:end_ts="1456301647" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-2395820573219695629" xil_pn:start_ts="1456301647">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1456281197" xil_pn:in_ck="-6913444474306041788" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="173674682997689350" xil_pn:start_ts="1456281192">
+    <transform xil_pn:end_ts="1456302212" xil_pn:in_ck="5085372155340088616" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3015496631385275302" xil_pn:start_ts="1456302207">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -228,89 +269,77 @@
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="test_dac_hardware.lso"/>
-      <outfile xil_pn:name="test_dac_hardware.ngc"/>
-      <outfile xil_pn:name="test_dac_hardware.ngr"/>
-      <outfile xil_pn:name="test_dac_hardware.prj"/>
-      <outfile xil_pn:name="test_dac_hardware.stx"/>
-      <outfile xil_pn:name="test_dac_hardware.syr"/>
-      <outfile xil_pn:name="test_dac_hardware.xst"/>
-      <outfile xil_pn:name="test_dac_hardware_vhdl.prj"/>
-      <outfile xil_pn:name="test_dac_hardware_xst.xrpt"/>
+      <outfile xil_pn:name="test_adc_hardware.lso"/>
+      <outfile xil_pn:name="test_adc_hardware.ngc"/>
+      <outfile xil_pn:name="test_adc_hardware.ngr"/>
+      <outfile xil_pn:name="test_adc_hardware.prj"/>
+      <outfile xil_pn:name="test_adc_hardware.stx"/>
+      <outfile xil_pn:name="test_adc_hardware.syr"/>
+      <outfile xil_pn:name="test_adc_hardware.xst"/>
+      <outfile xil_pn:name="test_adc_hardware_vhdl.prj"/>
+      <outfile xil_pn:name="test_adc_hardware_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1455842332" xil_pn:in_ck="114062274874350624" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3707829444808937064" xil_pn:start_ts="1455842332">
+    <transform xil_pn:end_ts="1456302383" xil_pn:in_ck="-9102404267303537728" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4612064049385312776" xil_pn:start_ts="1456302383">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1456281200" xil_pn:in_ck="2528153436441241402" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1432466832042230154" xil_pn:start_ts="1456281197">
+    <transform xil_pn:end_ts="1456302386" xil_pn:in_ck="4507193809291209108" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5981884320694072854" xil_pn:start_ts="1456302383">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="test_dac_hardware.bld"/>
-      <outfile xil_pn:name="test_dac_hardware.ngd"/>
-      <outfile xil_pn:name="test_dac_hardware_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="test_adc_hardware.bld"/>
+      <outfile xil_pn:name="test_adc_hardware.ngd"/>
+      <outfile xil_pn:name="test_adc_hardware_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1456281203" xil_pn:in_ck="-4398794701664177701" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1456281200">
+    <transform xil_pn:end_ts="1456302389" xil_pn:in_ck="-151080701243398885" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1456302386">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="test_dac_hardware.pcf"/>
-      <outfile xil_pn:name="test_dac_hardware_map.map"/>
-      <outfile xil_pn:name="test_dac_hardware_map.mrp"/>
-      <outfile xil_pn:name="test_dac_hardware_map.ncd"/>
-      <outfile xil_pn:name="test_dac_hardware_map.ngm"/>
-      <outfile xil_pn:name="test_dac_hardware_map.xrpt"/>
-      <outfile xil_pn:name="test_dac_hardware_summary.xml"/>
-      <outfile xil_pn:name="test_dac_hardware_usage.xml"/>
+      <outfile xil_pn:name="test_adc_hardware.pcf"/>
+      <outfile xil_pn:name="test_adc_hardware_map.map"/>
+      <outfile xil_pn:name="test_adc_hardware_map.mrp"/>
+      <outfile xil_pn:name="test_adc_hardware_map.ncd"/>
+      <outfile xil_pn:name="test_adc_hardware_map.ngm"/>
+      <outfile xil_pn:name="test_adc_hardware_map.xrpt"/>
+      <outfile xil_pn:name="test_adc_hardware_summary.xml"/>
+      <outfile xil_pn:name="test_adc_hardware_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1456281218" xil_pn:in_ck="-1577351910364691564" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6268780068511726196" xil_pn:start_ts="1456281203">
+    <transform xil_pn:end_ts="1456302401" xil_pn:in_ck="-3660651577995290924" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6268780068511726196" xil_pn:start_ts="1456302389">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="test_dac_hardware.ncd"/>
-      <outfile xil_pn:name="test_dac_hardware.pad"/>
-      <outfile xil_pn:name="test_dac_hardware.par"/>
-      <outfile xil_pn:name="test_dac_hardware.ptwx"/>
-      <outfile xil_pn:name="test_dac_hardware.unroutes"/>
-      <outfile xil_pn:name="test_dac_hardware.xpi"/>
-      <outfile xil_pn:name="test_dac_hardware_pad.csv"/>
-      <outfile xil_pn:name="test_dac_hardware_pad.txt"/>
-      <outfile xil_pn:name="test_dac_hardware_par.xrpt"/>
+      <outfile xil_pn:name="test_adc_hardware.ncd"/>
+      <outfile xil_pn:name="test_adc_hardware.pad"/>
+      <outfile xil_pn:name="test_adc_hardware.par"/>
+      <outfile xil_pn:name="test_adc_hardware.ptwx"/>
+      <outfile xil_pn:name="test_adc_hardware.unroutes"/>
+      <outfile xil_pn:name="test_adc_hardware.xpi"/>
+      <outfile xil_pn:name="test_adc_hardware_pad.csv"/>
+      <outfile xil_pn:name="test_adc_hardware_pad.txt"/>
+      <outfile xil_pn:name="test_adc_hardware_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1456281226" xil_pn:in_ck="114062274874342999" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2026545883141104544" xil_pn:start_ts="1456281218">
+    <transform xil_pn:end_ts="1456302443" xil_pn:in_ck="-9102404267303545353" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2026545883141104544" xil_pn:start_ts="1456302434">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="test_dac_hardware.bgn"/>
-      <outfile xil_pn:name="test_dac_hardware.bin"/>
-      <outfile xil_pn:name="test_dac_hardware.bit"/>
-      <outfile xil_pn:name="test_dac_hardware.drc"/>
-      <outfile xil_pn:name="test_dac_hardware.ut"/>
+      <outfile xil_pn:name="test_adc_hardware.bgn"/>
+      <outfile xil_pn:name="test_adc_hardware.bin"/>
+      <outfile xil_pn:name="test_adc_hardware.bit"/>
+      <outfile xil_pn:name="test_adc_hardware.drc"/>
+      <outfile xil_pn:name="test_adc_hardware.ut"/>
       <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1455425051" xil_pn:in_ck="114062274874330145" xil_pn:name="TRAN_genImpactFile" xil_pn:prop_ck="7121392639749839438" xil_pn:start_ts="1455425048">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
-    </transform>
-    <transform xil_pn:end_ts="1456281218" xil_pn:in_ck="6067899916483114711" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1456281215">
+    <transform xil_pn:end_ts="1456302401" xil_pn:in_ck="-8131130156805658089" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1456302399">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="test_dac_hardware.twr"/>
-      <outfile xil_pn:name="test_dac_hardware.twx"/>
-    </transform>
-    <transform xil_pn:end_ts="1455411379" xil_pn:in_ck="-4398794701664177701" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1455411375">
-      <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="test_adc_hardware.twr"/>
+      <outfile xil_pn:name="test_adc_hardware.twx"/>
     </transform>
   </transforms>
 

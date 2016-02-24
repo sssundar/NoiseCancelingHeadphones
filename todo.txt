@@ -14,58 +14,49 @@ Trying 400Hz waveform. Works. 2.56 ms period. with or without 0.1uF cap sounds g
 Trying 800Hz -> noticed gain distortion. But works.
 
 Rebuilding separate 400, 800 Hz files without 0.1uF 1/sC filter, to see if
-gain distortion disappears. Yes. Close enough. 2V p-p for both.
+gain distortion disappears. Yes. Close enough. 2V, 1.9V p-p for both.
 
 Next step is to do the same for 4 kHz
 Sound level at 255 is definitely loud enough for a first pass. 
-The DAC circuit is validated if 4 kHz works.
+The DAC circuit is validated if 4 kHz works. Yep, 1.6V p-p, so a bit of a drop.
+
 Bug: Ignoring the periodic 1V spiking (we'll deal with it later)
+Bug: Ignoring the source of the LPF in the current circuit.. 
 
 Proceed to ADC. 
 
-Wednesday
----------
-
 Floorplanning for:
-DAC system test in h/w with PMOD 
 ADC system test in h/w (set up adc on breadboard, sample periodically 4 pots, drive led's, buttons set channels)
 	(1.5 hours)
+
 
 Preamp parts list + schematic 
 Postamp parts list + schematic 
 	(30 minutes)
 
-Build pre/post amps (x4, x2)
+Build & test pre/post amps in h/w (x4, x2)
 	(1 hour)
 Build mic/headphone setup
 	(1 hour)
 
-Verify pre-amp in lab with ADC system test
-	(30 minutes)
-Verify post-amp with DAC system test in h/w
-	(30 minutes)
+Test mic/headphone setup in oscilloscope just for noise at ends of pre-amp.
 
-Full system wiring + review
+Full calibration system wiring in s/w, calibrate
 	(1 hour)
 
-Thursday 
--------------------
-Full system test in h/w.
+Full system wiring in s/w, burn in and test.
 
-ADC 
----
-Notes:
+
+Notes for ADC/System Rails:
 	Need to latch and display on some pins the 2 MSB to make sure we aren't hitting them during calibration.
-	Takes 5 V supply, so use 5V to 3.3 V converter.
+	Takes 5 V supply, so use 5V to 3.3 V logic converter.
 	Use soldered male pins for PMOD connections.
 	0-5 V / 1024 and wanting 255 LSB means we want 0-1.25V centered at 0.5 V as "128," the DC bias.
-		Use a 5 V LDO off the 9V rail for the ADC
-	Let's make the pre-amp run off the 9V supply and AC couple things, and run the mics off the 3.3 LDO on board
-	User resistive divider for INT and the conveter for the data bus (8 bits). 
-	Condfirm the rest, 3.3 will be fine for 5 V inputs?
+		Use a 5 V LDO off the 12V rail for the ADC and the DAC.
+	Let's make the pre-amp run off the 12V supply and AC couple things, and run the mics off the 5V LDO on board as before.
+	Use a resistive divider for INT and the conveter for the data bus (8 bits). 
+	Condfirm the rest, 3.3 will be fine for 5 V inputs, yes.
 
-Verify timing diagram for FSM including logic level conversion
-	Need to modify state diagram.
 
 
 
