@@ -26,13 +26,11 @@ Bug: Ignoring the source of the LPF in the current circuit..
 Proceed to ADC. 
 
 Floorplanning for:
-ADC system test in h/w (set up adc on breadboard, sample periodically 4 pots, drive led's, buttons set channels)
-	(1.5 hours)
+ADC system test in h/w (set up adc on breadboard, sample periodically 1 pot, rest grounded. drive led's, buttons set channels.
+	Top 2 bits are driving leds with 10K resistors to make sure don't overload ADC outputs (360uA is pushing it)
 
-
-Preamp parts list + schematic 
-Postamp parts list + schematic 
-	(30 minutes)
+Preamp parts list + schematic -> IN PROGRESS
+Postamp parts list + schematic -> DONE	
 
 Build & test pre/post amps in h/w (x4, x2)
 	(1 hour)

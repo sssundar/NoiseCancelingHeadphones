@@ -74,6 +74,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="test_adc_hardware.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="test_adc_hardware.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="test_adc_hardware.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="test_adc_hardware_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="test_adc_hardware_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="test_adc_hardware_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="test_adc_hardware_map.mrp" xil_pn:subbranch="Map"/>
@@ -84,6 +85,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="test_adc_hardware_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="test_adc_hardware_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_adc_hardware_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="test_adc_hardware_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="test_adc_hardware_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="test_adc_hardware_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_adc_hardware_vhdl.prj"/>
@@ -261,7 +263,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1456302212" xil_pn:in_ck="5085372155340088616" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3015496631385275302" xil_pn:start_ts="1456302207">
+    <transform xil_pn:end_ts="1456373176" xil_pn:in_ck="5085372155340088616" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3015496631385275302" xil_pn:start_ts="1456373171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -285,7 +287,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1456302386" xil_pn:in_ck="4507193809291209108" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5981884320694072854" xil_pn:start_ts="1456302383">
+    <transform xil_pn:end_ts="1456373179" xil_pn:in_ck="4507193809291209108" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5981884320694072854" xil_pn:start_ts="1456373176">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -294,11 +296,9 @@
       <outfile xil_pn:name="test_adc_hardware.ngd"/>
       <outfile xil_pn:name="test_adc_hardware_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1456302389" xil_pn:in_ck="-151080701243398885" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1456302386">
+    <transform xil_pn:end_ts="1456373182" xil_pn:in_ck="9047111026243134166" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1456373179">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="test_adc_hardware.pcf"/>
       <outfile xil_pn:name="test_adc_hardware_map.map"/>
@@ -309,7 +309,7 @@
       <outfile xil_pn:name="test_adc_hardware_summary.xml"/>
       <outfile xil_pn:name="test_adc_hardware_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1456302401" xil_pn:in_ck="-3660651577995290924" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6268780068511726196" xil_pn:start_ts="1456302389">
+    <transform xil_pn:end_ts="1456373195" xil_pn:in_ck="-6426830391360458552" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6268780068511726196" xil_pn:start_ts="1456373182">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -323,11 +323,9 @@
       <outfile xil_pn:name="test_adc_hardware_pad.txt"/>
       <outfile xil_pn:name="test_adc_hardware_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1456302443" xil_pn:in_ck="-9102404267303545353" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2026545883141104544" xil_pn:start_ts="1456302434">
+    <transform xil_pn:end_ts="1456373204" xil_pn:in_ck="1085336385372222638" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2026545883141104544" xil_pn:start_ts="1456373195">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="test_adc_hardware.bgn"/>
       <outfile xil_pn:name="test_adc_hardware.bin"/>
@@ -341,8 +339,10 @@
     <transform xil_pn:end_ts="1456303141" xil_pn:in_ck="-9102404267303558207" xil_pn:name="TRAN_genImpactFile" xil_pn:prop_ck="7121392639749839438" xil_pn:start_ts="1456303139">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1456302401" xil_pn:in_ck="-8131130156805658089" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1456302399">
+    <transform xil_pn:end_ts="1456373195" xil_pn:in_ck="73848747294678222" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1456373193">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

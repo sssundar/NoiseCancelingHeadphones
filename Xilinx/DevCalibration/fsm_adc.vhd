@@ -190,7 +190,7 @@ begin
 
 	-- Wait Counter
 	waitCounter: kBitCounter
-		generic map ( k => 3 )
+		generic map ( k => 4 )
 		port map (	
 			sys_clk => sys_clk,
 			clear => clear_wait_counter,

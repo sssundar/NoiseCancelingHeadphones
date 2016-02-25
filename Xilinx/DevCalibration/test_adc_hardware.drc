@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Feb 24 00:27:15 2016
+Wed Feb 24 20:06:37 2016
 
 drc -z test_adc_hardware.ncd test_adc_hardware.pcf
 

@@ -9,7 +9,8 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/fsm_adc - dataflow D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|fsm_adc.vhd</ClosedNode>
          <ClosedNode>/generator_sine - dataflow D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|generator_sine.vhd</ClosedNode>
-         <ClosedNode>/test_dac_hardware - structural D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|test_dac_hardware.vhd</ClosedNode>
+         <ClosedNode>/test_adc_hardware - structural D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|test_adc_hardware.vhd/FiveTwelveCounter - kBitCounter - dataflow</ClosedNode>
+         <ClosedNode>/test_adc_hardware - structural D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|test_adc_hardware.vhd/UUT - fsm_adc - dataflow</ClosedNode>
          <ClosedNode>/test_dac_hardware - structural D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|test_dac_hardware.vhd/DAC - dac_single - dataflow</ClosedNode>
          <ClosedNode>/test_dac_hardware - structural D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|test_dac_hardware.vhd/FiveTwelveCounter - kBitCounter - dataflow</ClosedNode>
          <ClosedNode>/test_dac_hardware - structural D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|test_dac_hardware.vhd/HzCounter - kBitCounter - dataflow</ClosedNode>
@@ -18,27 +19,27 @@
          <ClosedNode>/test_dac_wiring - dataflow D:|Users|Sushant|Documents|GitHub|NoiseCancelingHeadphones|Xilinx|DevCalibration|test_dac_wiring.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>fsm_adc - dataflow (D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd)</SelectedItem>
+         <SelectedItem>test_adc_hardware - structural (D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000175000000020000000000000000000000000200000064ffffffff000000810000000300000002000001750000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000019f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000019f0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>fsm_adc - dataflow (D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd)</CurrentItem>
+      <CurrentItem>test_adc_hardware - structural (D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000fe000000010000000100000000000000000000000064ffffffff000000810000000000000001000000fe0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000133000000010000000100000000000000000000000064ffffffff000000810000000000000001000001330000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -68,17 +69,15 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
-         <ClosedNode>Synthesize - XST</ClosedNode>
-         <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Generate Target PROM/ACE File</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >8</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000133000000010000000100000000000000000000000064ffffffff000000810000000000000001000001330000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000122000000010000000100000000000000000000000064ffffffff000000810000000000000001000001220000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Generate Target PROM/ACE File</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -143,13 +142,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000133000000010000000100000000000000000000000064ffffffff000000810000000000000001000001330000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XAW" guiview="Process" >
       <ClosedNodes>
