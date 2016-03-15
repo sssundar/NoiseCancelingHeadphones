@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
 3 -fastpaths -xml test_dac_hardware.twx test_dac_hardware.ncd -o
-test_dac_hardware.twr test_dac_hardware.pcf -ucf test_dac_hardware.ucf
+test_dac_hardware.twr test_dac_hardware.pcf -ucf test_adc_hardware.ucf
 
 Design file:              test_dac_hardware.ncd
 Physical constraint file: test_dac_hardware.pcf
@@ -45,7 +45,7 @@ Setup/Hold to clock sys_clk_50
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-reset       |    8.461(R)|   -2.242(R)|sys_clk_20        |   0.000|
+reset       |    7.745(R)|   -2.429(R)|sys_clk_20        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock sys_clk_50 to Pad
@@ -53,11 +53,9 @@ Clock sys_clk_50 to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-hz_pulse    |    5.545(R)|sys_clk_20        |   0.000|
-out_dac     |    7.033(R)|sys_clk_20        |   0.000|
-out_dac1    |    8.042(R)|sys_clk_20        |   0.000|
-out_dac2    |    8.383(R)|sys_clk_20        |   0.000|
-out_dac3    |    7.430(R)|sys_clk_20        |   0.000|
+hz_pulse    |    6.450(R)|sys_clk_20        |   0.000|
+out_dac_l   |    6.372(R)|sys_clk_20        |   0.000|
+out_dac_r   |    6.625(R)|sys_clk_20        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock sys_clk_50
@@ -65,23 +63,21 @@ Clock to Setup on destination clock sys_clk_50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sys_clk_50     |    6.822|         |         |         |
+sys_clk_50     |    7.140|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-oe             |oe_led         |    9.692|
-oe             |out_dac        |    7.171|
-oe             |out_dac1       |    8.180|
-oe             |out_dac2       |    8.521|
-oe             |out_dac3       |    7.568|
+oe             |oe_led         |    9.661|
+oe             |out_dac_l      |    7.456|
+oe             |out_dac_r      |    7.709|
 reset          |reset_led      |    5.938|
 ---------------+---------------+---------+
 
 
-Analysis completed Tue Feb 23 18:33:36 2016 
+Analysis completed Tue Mar 15 11:16:54 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

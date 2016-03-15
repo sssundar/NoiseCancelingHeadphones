@@ -5,124 +5,58 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">120</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clock_divider</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">128</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clock_divider</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">120</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK0_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clock_divider</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">128</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK0_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">clock_divider</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">129</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">count</arg>&apos; of component &apos;<arg fmt="%s" index="4">kBitCounter</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">137</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">count</arg>&apos; of component &apos;<arg fmt="%s" index="4">kBitCounter</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">139</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">vin0</arg>&apos; of component &apos;<arg fmt="%s" index="4">fsm_adc</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">148</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">count</arg>&apos; of component &apos;<arg fmt="%s" index="4">kBitCounter</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">139</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">vin1</arg>&apos; of component &apos;<arg fmt="%s" index="4">fsm_adc</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">161</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">count</arg>&apos; of component &apos;<arg fmt="%s" index="4">kBitCounter</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">139</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">vin2</arg>&apos; of component &apos;<arg fmt="%s" index="4">fsm_adc</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">198</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">out_dac1</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_adc_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">139</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">vin3</arg>&apos; of component &apos;<arg fmt="%s" index="4">fsm_adc</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">198</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">out_dac2</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd</arg>&quot; line <arg fmt="%d" index="2">192</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">count</arg>&apos; of component &apos;<arg fmt="%s" index="4">kBitCounter</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">198</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">out_dac3</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">198</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">accumulator_state</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">198</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">internal_sample_state</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">out_dac1</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">out_dac2</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">out_dac3</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">accumulator_state</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_dac_hardware.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">internal_sample_state</arg>&apos; of component &apos;<arg fmt="%s" index="4">dac_single</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin0_register_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">carries&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">accum_carries&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin1_register_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin2_register_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">UUT/vin3_register_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test_adc_hardware</arg>&gt;.
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">test_dac_hardware</arg>&gt;: instances &lt;<arg fmt="%s" index="2">DACL</arg>&gt;, &lt;<arg fmt="%s" index="3">DACR</arg>&gt; of unit &lt;<arg fmt="%s" index="4">dac_single</arg>&gt; are equivalent, second instance is removed
 </msg>
 
 </messages>

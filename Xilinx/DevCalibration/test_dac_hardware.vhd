@@ -36,10 +36,8 @@ entity  test_dac_hardware  is
 		hz_pulse : out std_logic;
 		
 		-- a DAC (output) data line.
-		out_dac : out std_logic;
-		out_dac1 : out std_logic;
-		out_dac2 : out std_logic;
-		out_dac3 : out std_logic;
+		out_dac_l : out std_logic;
+		out_dac_r : out std_logic;		
 		
 		-- System Clock
 		sys_clk_50 : in std_logic
@@ -197,7 +195,7 @@ begin
 			sys_clk => sys_clk_20
 			);	
 	
-	DAC: dac_single
+	DACL: dac_single
 		port map (				
 			filter_sample => "00000000",
 			calibration_sample => dac_in,
@@ -207,10 +205,28 @@ begin
 			oversample_tick => oversample_tick,
 			oe => oe,
 			reset => reset,			
-			out_dac => out_dac,			
-			out_dac1 => out_dac1,	
-			out_dac2 => out_dac2,	
-			out_dac3 => out_dac3,	
+			out_dac => out_dac_l,			
+			out_dac1 => open,	
+			out_dac2 => open,	
+			out_dac3 => open,	
+			accumulator_state => open,
+			internal_sample_state => open
+			);	
+
+	DACR: dac_single
+		port map (				
+			filter_sample => "00000000",
+			calibration_sample => dac_in,
+			flag_calibration => '1',
+			sys_clk => sys_clk_20,
+			sample_tick => sample_tick,
+			oversample_tick => oversample_tick,
+			oe => oe,
+			reset => reset,			
+			out_dac => out_dac_r,			
+			out_dac1 => open,	
+			out_dac2 => open,	
+			out_dac3 => open,	
 			accumulator_state => open,
 			internal_sample_state => open
 			);	

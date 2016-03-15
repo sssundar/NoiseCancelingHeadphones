@@ -1,62 +1,21 @@
 
+
+NET "oe" LOC = N17;
+NET "reset" LOC = L13;
+
+
+NET "out_dac_l" SLEW = FAST;
+NET "out_dac_r" SLEW = FAST;
+
+NET "out_dac_r" LOC = L15;
+NET "out_dac_l" LOC = K12;
+
+NET "reset_led" LOC = P16;
+
+NET "oe_led" LOC = E4;
+
+NET "hz_pulse" LOC = J15;
+
 # PlanAhead Generated physical constraints 
 
 NET "sys_clk_50" LOC = B8;
-
-# PlanAhead Generated IO constraints 
-
-NET "nInt" IOSTANDARD = LVCMOS33;
-NET "nRD" IOSTANDARD = LVCMOS33;
-NET "nSH" IOSTANDARD = LVCMOS33;
-NET "reset" IOSTANDARD = LVCMOS25;
-NET "s0" IOSTANDARD = LVCMOS33;
-NET "s1" IOSTANDARD = LVCMOS33;
-NET "nRD" SLEW = FAST;
-NET "nSH" SLEW = FAST;
-NET "s0" SLEW = FAST;
-NET "s1" SLEW = FAST;
-NET "leds[0]" IOSTANDARD = LVCMOS33;
-NET "leds[1]" IOSTANDARD = LVCMOS33;
-NET "leds[2]" IOSTANDARD = LVCMOS33;
-NET "leds[3]" IOSTANDARD = LVCMOS33;
-NET "leds[4]" IOSTANDARD = LVCMOS33;
-NET "leds[5]" IOSTANDARD = LVCMOS33;
-NET "leds[6]" IOSTANDARD = LVCMOS33;
-NET "leds[7]" IOSTANDARD = LVCMOS33;
-NET "databus[0]" IOSTANDARD = LVCMOS33;
-NET "databus[1]" IOSTANDARD = LVCMOS33;
-NET "databus[2]" IOSTANDARD = LVCMOS33;
-NET "databus[3]" IOSTANDARD = LVCMOS33;
-NET "databus[4]" IOSTANDARD = LVCMOS33;
-NET "databus[5]" IOSTANDARD = LVCMOS33;
-NET "databus[6]" IOSTANDARD = LVCMOS33;
-NET "databus[7]" IOSTANDARD = LVCMOS33;
-
-# PlanAhead Generated physical constraints 
-
-NET "reset" LOC = L13;
-NET "buttons[0]" LOC = B18;
-NET "buttons[1]" LOC = D18;
-NET "buttons[2]" LOC = E18;
-NET "buttons[3]" LOC = H13;
-NET "databus[0]" LOC = G15;
-NET "databus[1]" LOC = J16;
-NET "databus[2]" LOC = G13;
-NET "databus[3]" LOC = H16;
-NET "databus[4]" LOC = H15;
-NET "databus[5]" LOC = F14;
-NET "databus[6]" LOC = G16;
-NET "databus[7]" LOC = J12;
-NET "leds[0]" LOC = J14;
-NET "leds[1]" LOC = J15;
-NET "leds[2]" LOC = K15;
-NET "leds[3]" LOC = K14;
-NET "leds[4]" LOC = E16;
-NET "leds[5]" LOC = P16;
-NET "leds[6]" LOC = E4;
-NET "leds[7]" LOC = P4;
-NET "nInt" LOC = M15;
-NET "nRD" LOC = T18;
-NET "nSH" LOC = U18;
-NET "s0" LOC = R16;
-NET "s1" LOC = P17;
