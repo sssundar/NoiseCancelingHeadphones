@@ -1,5 +1,11 @@
 -- This entity is a 8-bit unsigned "sine" wave sample generator. 
--- It actually generates a square wave from 0-255, 
+-- It actually generates a square wave from 0-255,
+
+-- TODO -- 
+-- Modified temporarily to output from 0-50, for ADC-DAC matching
+-- at reasonable audio volumes observed. Need to make this parametric.
+-- END TODO --
+
 -- incrementing by +5 or decrementing by +5 every sample tick.
 -- If sample ticks are 40 kHz this yields a 400 Hz wave.
 --
@@ -82,7 +88,7 @@ architecture dataflow of generator_sine is
 	-- Adder Constants, 9 bit signed.
 	constant SG_POSITIVE_FIVE : std_logic_vector(0 to 7) := "00000101";
 	constant SG_ZERO 		  : std_logic_vector(0 to 7) := "00000000";
-	constant SG_MAX 		  : std_logic_vector(0 to 7) := "11111111";
+	constant SG_MAX 		  : std_logic_vector(0 to 7) := "00110010"; -- TODO change back to 255
 
 begin
 	-- Output

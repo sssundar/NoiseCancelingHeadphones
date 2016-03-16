@@ -1,0 +1,93 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml test_adc_dac_matching.twx test_adc_dac_matching.ncd -o
+test_adc_dac_matching.twr test_adc_dac_matching.pcf -ucf
+test_adc_dac_matching.ucf
+
+Design file:              test_adc_dac_matching.ncd
+Physical constraint file: test_adc_dac_matching.pcf
+Device,package,speed:     xc3s1200e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock sys_clk_50
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+nInt        |    4.292(R)|   -2.109(R)|sys_clk_20        |   0.000|
+reset       |    8.030(R)|   -2.481(R)|sys_clk_20        |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock sys_clk_50 to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+nRD         |    7.522(R)|sys_clk_20        |   0.000|
+nSH         |    8.461(R)|sys_clk_20        |   0.000|
+out_dac_l   |    6.907(R)|sys_clk_20        |   0.000|
+out_dac_r   |    7.406(R)|sys_clk_20        |   0.000|
+s0          |    5.266(R)|sys_clk_20        |   0.000|
+s1          |    4.896(R)|sys_clk_20        |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock sys_clk_50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_50     |    7.041|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+oe             |out_dac_l      |    7.594|
+oe             |out_dac_r      |    8.093|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Mar 16 12:07:26 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 146 MB
+
+
+
