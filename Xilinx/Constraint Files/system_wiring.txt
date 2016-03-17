@@ -25,6 +25,15 @@ NET "out_dac_r" IOSTANDARD = LVCMOS33;
 NET "out_dac_l" SLEW = FAST;
 NET "out_dac_r" SLEW = FAST;
 
+NET "databus[0]" SLEW = FAST;
+NET "databus[1]" SLEW = FAST;
+NET "databus[2]" SLEW = FAST;
+NET "databus[3]" SLEW = FAST;
+NET "databus[4]" SLEW = FAST;
+NET "databus[5]" SLEW = FAST;
+NET "databus[6]" SLEW = FAST;
+NET "databus[7]" SLEW = FAST;
+
 NET "databus[0]" IOSTANDARD = LVCMOS33;
 NET "databus[1]" IOSTANDARD = LVCMOS33;
 NET "databus[2]" IOSTANDARD = LVCMOS33;

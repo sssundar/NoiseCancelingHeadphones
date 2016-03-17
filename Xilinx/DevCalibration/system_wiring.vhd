@@ -268,7 +268,7 @@ begin
 			s0 => s0,
 			s1 => s1
 		 );	
-		
+		 
 	DACL: dac_single
 		port map (				
 			filter_sample => left_spk_dac_input,

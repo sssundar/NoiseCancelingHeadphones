@@ -56,7 +56,7 @@ databus<5>  |    3.879(R)|   -2.084(R)|sys_clk_20        |   0.000|
 databus<6>  |    4.206(R)|   -2.371(R)|sys_clk_20        |   0.000|
 databus<7>  |    4.536(R)|   -2.634(R)|sys_clk_20        |   0.000|
 nInt        |    3.258(R)|   -1.273(R)|sys_clk_20        |   0.000|
-reset       |   10.828(R)|   -1.934(R)|sys_clk_20        |   0.000|
+reset       |   10.875(R)|   -1.821(R)|sys_clk_20        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock sys_clk_50 to Pad
@@ -66,10 +66,10 @@ Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
 nRD         |    8.023(R)|sys_clk_20        |   0.000|
 nSH         |    8.047(R)|sys_clk_20        |   0.000|
-out_dac_l   |    6.685(R)|sys_clk_20        |   0.000|
+out_dac_l   |    6.686(R)|sys_clk_20        |   0.000|
 out_dac_r   |    7.844(R)|sys_clk_20        |   0.000|
-s0          |    5.744(R)|sys_clk_20        |   0.000|
-s1          |    5.221(R)|sys_clk_20        |   0.000|
+s0          |    5.805(R)|sys_clk_20        |   0.000|
+s1          |    5.160(R)|sys_clk_20        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock sys_clk_50
@@ -77,11 +77,11 @@ Clock to Setup on destination clock sys_clk_50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sys_clk_50     |    8.669|         |         |         |
+sys_clk_50     |    8.648|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Mar 16 19:34:17 2016 
+Analysis completed Wed Mar 16 20:14:49 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
