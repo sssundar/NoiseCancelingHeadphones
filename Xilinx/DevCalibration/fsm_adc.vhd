@@ -139,12 +139,17 @@ architecture  dataflow  of  fsm_adc  is
 
 	signal daisyChain4	: std_logic_vector(2 downto 0);
 	signal syncNInt : std_logic;
-
+	
+	-- TODO - testing whether buffering pad this way helps; seeing a lot of noise on power rails
+	-- when I feed logic-level shifter output directly to PMOD pads.
+	-- Also - check series R/diode/gate cap specs for FPGA - don't always seem to be able to drive
+	-- signals easily off the logic level converter. Re-think timing diagram here?
+	signal syncDatabus : std_logic_vector(0 to 7);
 begin
 	-- Control Signals
 	led_write_enable <= '1' when ((shift_samples = '1') and ( ( (syncButton0 = '1') and std_match(sample_count, "00") ) or ( (syncButton1 = '1') and std_match(sample_count, "01") ) or ( (syncButton2 = '1') and std_match(sample_count, "10") ) or ( (syncButton3 = '1') and std_match(sample_count, "11") ) ) ) else '0';
 	shift_samples <= '1' when std_match(PresentState, ADC_SHIFT) else '0';
-	inv_msb <= '0' when std_match(databus(0),'1') else '1';
+	inv_msb <= '0' when std_match(syncDatabus(0),'1') else '1';
 	
 	-- Assign Outputs
 	s0 <= sample_count(1);
@@ -172,6 +177,7 @@ begin
 			daisyChain2(2 downto 0) <= daisyChain2(1 downto 0) & buttons(2); 
 			daisyChain3(2 downto 0) <= daisyChain3(1 downto 0) & buttons(3); 
 			daisyChain4(2 downto 0) <= daisyChain4(1 downto 0) & nInt; 
+			syncDatabus(0 to 7) <= databus(0 to 7);
 		end if;
 	end process;
 
@@ -201,18 +207,18 @@ begin
 	
 	
 	-- Sample Register, LED Register Update Process
-	register_update: process (sys_clk, reset, led_write_enable, shift_samples, inv_msb, led_register, vin0_register, vin1_register, vin2_register, vin3_register, databus)
+	register_update: process (sys_clk, reset, led_write_enable, shift_samples, inv_msb, led_register, vin0_register, vin1_register, vin2_register, vin3_register, syncDatabus)
 	begin
 		if rising_edge(sys_clk) then
 			if ( (shift_samples = '1') and (reset = '0') )then
 				vin0_register <= vin1_register;
 				vin1_register <= vin2_register;
 				vin2_register <= vin3_register;
-				vin3_register(0 to 7) <= inv_msb & databus(1 to 7);
+				vin3_register(0 to 7) <= inv_msb & syncDatabus(1 to 7);
 			end if;
 			
 			if ( (led_write_enable = '1') and (reset = '0') )then
-				led_register <= databus;
+				led_register <= syncDatabus;
 			end if;			
 			
 			if (reset = '1') then
@@ -220,7 +226,7 @@ begin
 				vin0_register <= "00000000";
 				vin1_register <= "00000000";
 				vin2_register <= "00000000";
-				vin3_register <= "00000000";
+				vin3_register <= "00000000";				
 			end if;
 		end if;
 	end process register_update;

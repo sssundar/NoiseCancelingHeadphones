@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Wed Mar 16 20:13:13 2016">
+  <application stringID="Xst" timeStamp="Wed Mar 16 20:41:53 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -113,7 +113,7 @@
       <item dataType="int" stringID="XST_COUNTERS" value="1">
         <item dataType="int" stringID="XST_4BIT_UP_COUNTER" value="1"/>
       </item>
-      <item dataType="int" stringID="XST_REGISTERS" value="614">
+      <item dataType="int" stringID="XST_REGISTERS" value="615">
         <item dataType="int" stringID="XST_1BIT_REGISTER" value="257"/>
         <item dataType="int" stringID="XST_11BIT_REGISTER" value="66"/>
         <item dataType="int" stringID="XST_14BIT_REGISTER" value="6"/>
@@ -124,7 +124,7 @@
         <item dataType="int" stringID="XST_5BIT_REGISTER" value="1"/>
         <item dataType="int" stringID="XST_6BIT_REGISTER" value="2"/>
         <item dataType="int" stringID="XST_7BIT_REGISTER" value="2"/>
-        <item dataType="int" stringID="XST_8BIT_REGISTER" value="137"/>
+        <item dataType="int" stringID="XST_8BIT_REGISTER" value="138"/>
         <item dataType="int" stringID="XST_9BIT_REGISTER" value="129"/>
       </item>
       <item dataType="int" stringID="XST_XORS" value="1893">
@@ -137,8 +137,8 @@
       <item dataType="int" stringID="XST_COUNTERS" value="1">
         <item dataType="int" stringID="XST_4BIT_UP_COUNTER" value="1"/>
       </item>
-      <item dataType="int" stringID="XST_REGISTERS" value="3411">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="3411"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="3419">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="3419"/>
       </item>
       <item dataType="int" stringID="XST_XORS" value="1893">
         <item dataType="int" stringID="XST_1BIT_XOR2" value="980"/>
@@ -146,8 +146,8 @@
       </item>
     </section>
     <section stringID="XST_FINAL_REGISTER_REPORT">
-      <item dataType="int" stringID="XST_REGISTERS" value="3400">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="3400"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="3408">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="3408"/>
       </item>
       <item dataType="int" stringID="XST_SHIFT_REGISTERS" value="3">
         <item dataType="int" stringID="XST_3BIT_SHIFT_REGISTER" value="3"/>
@@ -185,8 +185,8 @@
           <item dataType="int" stringID="XST_MUXF5" value="90"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
         </item>
-        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="3403">
-          <item dataType="int" stringID="XST_FD" value="7"/>
+        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="3411">
+          <item dataType="int" stringID="XST_FD" value="15"/>
           <item dataType="int" stringID="XST_FDE" value="2028"/>
           <item dataType="int" stringID="XST_FDR" value="93"/>
           <item dataType="int" stringID="XST_FDRE" value="1266"/>
@@ -212,7 +212,7 @@
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s1200efg320-4"/>
       <item AVAILABLE="8672" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="3542"/>
-      <item AVAILABLE="17344" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="3403"/>
+      <item AVAILABLE="17344" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="3411"/>
       <item AVAILABLE="17344" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="6689"/>
       <item dataType="int" label="Number used as Logic" stringID="XST_NUMBER_USED_AS_LOGIC" value="6686"/>
       <item dataType="int" label="Number used as Shift registers" stringID="XST_NUMBER_USED_AS_SHIFT_REGISTERS" value="3"/>

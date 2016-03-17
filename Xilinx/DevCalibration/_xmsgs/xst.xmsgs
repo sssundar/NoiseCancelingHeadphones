@@ -62,7 +62,7 @@
 <msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd</arg>&quot; line <arg fmt="%d" index="2">308</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">right_working_filter_coefficients</arg>&apos; of component &apos;<arg fmt="%s" index="4">block_filter_pair</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd</arg>&quot; line <arg fmt="%d" index="2">192</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">count</arg>&apos; of component &apos;<arg fmt="%s" index="4">kBitCounter</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd</arg>&quot; line <arg fmt="%d" index="2">198</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">count</arg>&apos; of component &apos;<arg fmt="%s" index="4">kBitCounter</arg>&apos;.
 </msg>
 
 <msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter_pair.vhd</arg>&quot; line <arg fmt="%d" index="2">185</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">trigger_fsm_filter_update</arg>&apos; of component &apos;<arg fmt="%s" index="4">fsm_convolution</arg>&apos;.

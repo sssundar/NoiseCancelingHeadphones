@@ -141,14 +141,14 @@ Architecture dataflow of Entity block_filter is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/clock_divider.vhd" in Library work.
 Architecture behavioral of Entity clock_divider is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" in Library work.
-Architecture dataflow of Entity fsm_adc is up to date.
+Entity <fsm_adc> compiled.
+Entity <fsm_adc> (Architecture <dataflow>) compiled.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/dac_single.vhd" in Library work.
 Architecture dataflow of Entity dac_single is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter_pair.vhd" in Library work.
 Architecture dataflow of Entity block_filter_pair is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" in Library work.
-Entity <system_wiring> compiled.
-Entity <system_wiring> (Architecture <structural>) compiled.
+Architecture structural of Entity system_wiring is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -458,7 +458,7 @@ Analyzing generic Entity <kBitCounter.2> in library <work> (Architecture <datafl
 Entity <kBitCounter.2> analyzed. Unit <kBitCounter.2> generated.
 
 Analyzing Entity <fsm_adc> in library <work> (Architecture <dataflow>).
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" line 192: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" line 198: Unconnected output port 'count' of component 'kBitCounter'.
 Entity <fsm_adc> analyzed. Unit <fsm_adc> generated.
 
 Analyzing generic Entity <kBitCounter.3> in library <work> (Architecture <dataflow>).
@@ -850,13 +850,14 @@ Synthesizing Unit <fsm_adc>.
     Found 3-bit register for signal <daisyChain3>.
     Found 3-bit register for signal <daisyChain4>.
     Found 8-bit register for signal <led_register>.
+    Found 8-bit register for signal <syncDatabus>.
     Found 8-bit register for signal <vin0_register>.
     Found 8-bit register for signal <vin1_register>.
     Found 8-bit register for signal <vin2_register>.
     Found 8-bit register for signal <vin3_register>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  55 D-type flip-flop(s).
+	inferred  63 D-type flip-flop(s).
 Unit <fsm_adc> synthesized.
 
 
@@ -942,7 +943,7 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  4-bit up counter                                      : 1
-# Registers                                            : 614
+# Registers                                            : 615
  1-bit register                                        : 257
  11-bit register                                       : 66
  14-bit register                                       : 6
@@ -953,7 +954,7 @@ Macro Statistics
  5-bit register                                        : 1
  6-bit register                                        : 2
  7-bit register                                        : 2
- 8-bit register                                        : 137
+ 8-bit register                                        : 138
  9-bit register                                        : 129
 # Xors                                                 : 1893
  1-bit xor2                                            : 980
@@ -1020,8 +1021,8 @@ Macro Statistics
 # FSMs                                                 : 4
 # Counters                                             : 1
  4-bit up counter                                      : 1
-# Registers                                            : 3411
- Flip-Flops                                            : 3411
+# Registers                                            : 3419
+ Flip-Flops                                            : 3419
 # Xors                                                 : 1893
  1-bit xor2                                            : 980
  1-bit xor3                                            : 913
@@ -1098,8 +1099,8 @@ Unit <system_wiring> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3400
- Flip-Flops                                            : 3400
+# Registers                                            : 3408
+ Flip-Flops                                            : 3408
 # Shift Registers                                      : 3
  3-bit shift register                                  : 3
 
@@ -1144,8 +1145,8 @@ Cell Usage :
 #      LUT4_L                      : 528
 #      MUXF5                       : 90
 #      VCC                         : 1
-# FlipFlops/Latches                : 3403
-#      FD                          : 7
+# FlipFlops/Latches                : 3411
+#      FD                          : 15
 #      FDE                         : 2028
 #      FDR                         : 93
 #      FDRE                        : 1266
@@ -1169,7 +1170,7 @@ Device utilization summary:
 Selected Device : 3s1200efg320-4 
 
  Number of Slices:                     3542  out of   8672    40%  
- Number of Slice Flip Flops:           3403  out of  17344    19%  
+ Number of Slice Flip Flops:           3411  out of  17344    19%  
  Number of 4 input LUTs:               6689  out of  17344    38%  
     Number used as logic:              6686
     Number used as Shift registers:       3
@@ -1199,7 +1200,7 @@ Clock Information:
 -----------------------------------+-------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)         | Load  |
 -----------------------------------+-------------------------------+-------+
-sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 3406  |
+sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 3414  |
 -----------------------------------+-------------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1222,7 +1223,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sys_clk_50'
   Clock period: 3.338ns (frequency: 299.545MHz)
-  Total number of paths / destination ports: 48762 / 6842
+  Total number of paths / destination ports: 48770 / 6850
 -------------------------------------------------------------------------
 Delay:               8.346ns (Levels of Logic = 6)
   Source:            DACR/accumulator_0 (FF)
@@ -1292,7 +1293,7 @@ Offset:              7.457ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 22.08 secs
+Total CPU time to Xst completion: 22.13 secs
  
 --> 
 
