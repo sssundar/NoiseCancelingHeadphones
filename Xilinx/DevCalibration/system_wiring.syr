@@ -1,0 +1,1304 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: system_wiring.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "system_wiring.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "system_wiring"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : system_wiring
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/magic_numbers.vhd" in Library work.
+Architecture magic_numbers of Entity magic_numbers is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/AddSub.vhd" in Library work.
+Architecture dataflow of Entity addsub is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd" in Library work.
+Architecture dataflow of Entity kbitcounter is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_best_residual.vhd" in Library work.
+Architecture dataflow of Entity register_best_residual is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_best_filter_coefficient.vhd" in Library work.
+Architecture dataflow of Entity register_best_filter_coefficient is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" in Library work.
+Architecture dataflow of Entity fsm_update_filter is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_input_history.vhd" in Library work.
+Architecture dataflow of Entity register_input_history is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_convolution_input.vhd" in Library work.
+Architecture dataflow of Entity register_convolution_input is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/accumulator_convolution.vhd" in Library work.
+Architecture dataflow of Entity accumulator_convolution is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_convolution_filter_coefficient.vhd" in Library work.
+Architecture dataflow of Entity register_convolution_filter_coefficient is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_filter_coefficient.vhd" in Library work.
+Architecture dataflow of Entity register_filter_coefficient is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/nCounter.vhd" in Library work.
+Architecture dataflow of Entity ncounter is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/lfsr_maximal_xnor_64_bit.vhd" in Library work.
+Architecture dataflow of Entity lfsr_maximal_xnor_64_bit is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_load_next_samples.vhd" in Library work.
+Architecture dataflow of Entity fsm_load_next_samples is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_input_history_shift.vhd" in Library work.
+Architecture dataflow of Entity fsm_input_history_shift is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_convolution.vhd" in Library work.
+Architecture dataflow of Entity fsm_convolution is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" in Library work.
+Architecture dataflow of Entity block_filter is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/clock_divider.vhd" in Library work.
+Architecture behavioral of Entity clock_divider is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" in Library work.
+Architecture dataflow of Entity fsm_adc is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/dac_single.vhd" in Library work.
+Architecture dataflow of Entity dac_single is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter_pair.vhd" in Library work.
+Architecture dataflow of Entity block_filter_pair is up to date.
+Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" in Library work.
+Entity <system_wiring> compiled.
+Entity <system_wiring> (Architecture <structural>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system_wiring> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <clock_divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 4
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 9
+
+Analyzing hierarchy for entity <fsm_adc> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <dac_single> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <block_filter_pair> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 2
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 3
+
+Analyzing hierarchy for entity <lfsr_maximal_xnor_64_bit> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <fsm_load_next_samples> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <fsm_input_history_shift> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <fsm_convolution> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <block_filter> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 3
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 3
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 5
+
+Analyzing hierarchy for entity <nCounter> in library <work> (architecture <dataflow>) with generics.
+	n = 10
+
+Analyzing hierarchy for entity <fsm_update_filter> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <register_input_history> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <register_convolution_input> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <accumulator_convolution> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <register_convolution_filter_coefficient> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <register_filter_coefficient> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <kBitCounter> in library <work> (architecture <dataflow>) with generics.
+	k = 6
+
+Analyzing hierarchy for entity <register_best_residual> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <register_best_filter_coefficient> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+Analyzing hierarchy for entity <AddSub> in library <work> (architecture <dataflow>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system_wiring> in library <work> (Architecture <structural>).
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 223: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clock_divider'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 223: Unconnected output port 'CLK0_OUT' of component 'clock_divider'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 232: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 243: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 253: Unconnected output port 'leds' of component 'fsm_adc'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 272: Unconnected output port 'out_dac1' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 272: Unconnected output port 'out_dac2' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 272: Unconnected output port 'out_dac3' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 272: Unconnected output port 'accumulator_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 272: Unconnected output port 'internal_sample_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 290: Unconnected output port 'out_dac1' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 290: Unconnected output port 'out_dac2' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 290: Unconnected output port 'out_dac3' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 290: Unconnected output port 'accumulator_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 290: Unconnected output port 'internal_sample_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 308: Unconnected output port 'left_best_filter_coefficients' of component 'block_filter_pair'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 308: Unconnected output port 'right_best_filter_coefficients' of component 'block_filter_pair'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 308: Unconnected output port 'left_working_filter_coefficients' of component 'block_filter_pair'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 308: Unconnected output port 'right_working_filter_coefficients' of component 'block_filter_pair'.
+Entity <system_wiring> analyzed. Unit <system_wiring> generated.
+
+Analyzing Entity <clock_divider> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <clock_divider>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKFX_DIVIDE =  5" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <clock_divider>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <clock_divider>.
+Entity <clock_divider> analyzed. Unit <clock_divider> generated.
+
+Analyzing generic Entity <kBitCounter.1> in library <work> (Architecture <dataflow>).
+	k = 4
+Entity <kBitCounter.1> analyzed. Unit <kBitCounter.1> generated.
+
+Analyzing Entity <AddSub> in library <work> (Architecture <dataflow>).
+Entity <AddSub> analyzed. Unit <AddSub> generated.
+
+Analyzing generic Entity <kBitCounter.2> in library <work> (Architecture <dataflow>).
+	k = 9
+Entity <kBitCounter.2> analyzed. Unit <kBitCounter.2> generated.
+
+Analyzing Entity <fsm_adc> in library <work> (Architecture <dataflow>).
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" line 192: Unconnected output port 'count' of component 'kBitCounter'.
+Entity <fsm_adc> analyzed. Unit <fsm_adc> generated.
+
+Analyzing generic Entity <kBitCounter.3> in library <work> (Architecture <dataflow>).
+	k = 2
+Entity <kBitCounter.3> analyzed. Unit <kBitCounter.3> generated.
+
+Analyzing generic Entity <kBitCounter.4> in library <work> (Architecture <dataflow>).
+	k = 3
+Entity <kBitCounter.4> analyzed. Unit <kBitCounter.4> generated.
+
+Analyzing Entity <dac_single> in library <work> (Architecture <dataflow>).
+Entity <dac_single> analyzed. Unit <dac_single> generated.
+
+Analyzing Entity <block_filter_pair> in library <work> (Architecture <dataflow>).
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter_pair.vhd" line 185: Unconnected output port 'trigger_fsm_filter_update' of component 'fsm_convolution'.
+Entity <block_filter_pair> analyzed. Unit <block_filter_pair> generated.
+
+Analyzing Entity <lfsr_maximal_xnor_64_bit> in library <work> (Architecture <dataflow>).
+Entity <lfsr_maximal_xnor_64_bit> analyzed. Unit <lfsr_maximal_xnor_64_bit> generated.
+
+Analyzing Entity <fsm_load_next_samples> in library <work> (Architecture <dataflow>).
+Entity <fsm_load_next_samples> analyzed. Unit <fsm_load_next_samples> generated.
+
+Analyzing Entity <fsm_input_history_shift> in library <work> (Architecture <dataflow>).
+Entity <fsm_input_history_shift> analyzed. Unit <fsm_input_history_shift> generated.
+
+Analyzing Entity <fsm_convolution> in library <work> (Architecture <dataflow>).
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_convolution.vhd" line 107: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_convolution.vhd" line 117: Unconnected output port 'count' of component 'kBitCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_convolution.vhd" line 127: Unconnected output port 'count' of component 'nCounter'.
+WARNING:Xst:819 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_convolution.vhd" line 197: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reset>
+Entity <fsm_convolution> analyzed. Unit <fsm_convolution> generated.
+
+Analyzing generic Entity <kBitCounter.5> in library <work> (Architecture <dataflow>).
+	k = 5
+Entity <kBitCounter.5> analyzed. Unit <kBitCounter.5> generated.
+
+Analyzing generic Entity <nCounter> in library <work> (Architecture <dataflow>).
+	n = 10
+Entity <nCounter> analyzed. Unit <nCounter> generated.
+
+Analyzing Entity <block_filter> in library <work> (Architecture <dataflow>).
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 195: Unconnected output port 'the_best_residual' of component 'fsm_update_filter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 195: Unconnected output port 'current_residual' of component 'fsm_update_filter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 195: Unconnected output port 'myPresentState' of component 'fsm_update_filter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 195: Unconnected output port 'myNextState' of component 'fsm_update_filter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 237: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 237: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'register_state' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 253: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 269: Unconnected output port 'sign_bit' of component 'register_convolution_input'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 285: Unconnected output port 'accumulator_state' of component 'accumulator_convolution'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd" line 298: Unconnected output port 'coefficient' of component 'register_convolution_filter_coefficient'.
+Entity <block_filter> analyzed. Unit <block_filter> generated.
+
+Analyzing Entity <fsm_update_filter> in library <work> (Architecture <dataflow>).
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 190: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 193: Unconnected output port 'SumDiff' of component 'AddSub'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd" line 197: Unconnected output port 'count' of component 'kBitCounter'.
+Entity <fsm_update_filter> analyzed. Unit <fsm_update_filter> generated.
+
+Analyzing generic Entity <kBitCounter.6> in library <work> (Architecture <dataflow>).
+	k = 6
+Entity <kBitCounter.6> analyzed. Unit <kBitCounter.6> generated.
+
+Analyzing Entity <register_best_residual> in library <work> (Architecture <dataflow>).
+Entity <register_best_residual> analyzed. Unit <register_best_residual> generated.
+
+Analyzing Entity <register_best_filter_coefficient> in library <work> (Architecture <dataflow>).
+Entity <register_best_filter_coefficient> analyzed. Unit <register_best_filter_coefficient> generated.
+
+Analyzing Entity <register_input_history> in library <work> (Architecture <dataflow>).
+Entity <register_input_history> analyzed. Unit <register_input_history> generated.
+
+Analyzing Entity <register_convolution_input> in library <work> (Architecture <dataflow>).
+Entity <register_convolution_input> analyzed. Unit <register_convolution_input> generated.
+
+Analyzing Entity <accumulator_convolution> in library <work> (Architecture <dataflow>).
+Entity <accumulator_convolution> analyzed. Unit <accumulator_convolution> generated.
+
+Analyzing Entity <register_convolution_filter_coefficient> in library <work> (Architecture <dataflow>).
+Entity <register_convolution_filter_coefficient> analyzed. Unit <register_convolution_filter_coefficient> generated.
+
+Analyzing Entity <register_filter_coefficient> in library <work> (Architecture <dataflow>).
+Entity <register_filter_coefficient> analyzed. Unit <register_filter_coefficient> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <AddSub>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/AddSub.vhd".
+    Found 1-bit xor3 for signal <SumDiff>.
+    Found 1-bit xor2 for signal <bEffective>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <AddSub> synthesized.
+
+
+Synthesizing Unit <lfsr_maximal_xnor_64_bit>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/lfsr_maximal_xnor_64_bit.vhd".
+    Found 64-bit register for signal <current_state>.
+    Found 1-bit xor2 for signal <current_state_0$xor0000>.
+    Found 1-bit xor2 for signal <current_state_0$xor0001>.
+    Found 1-bit xor2 for signal <current_state_0$xor0002>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <lfsr_maximal_xnor_64_bit> synthesized.
+
+
+Synthesizing Unit <fsm_load_next_samples>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_load_next_samples.vhd".
+    Found finite state machine <FSM_0> for signal <PresentState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | sys_clk                   (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 100                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <fsm_load_next_samples> synthesized.
+
+
+Synthesizing Unit <nCounter>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/nCounter.vhd".
+    Found 4-bit up counter for signal <internal_count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <nCounter> synthesized.
+
+
+Synthesizing Unit <register_input_history>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_input_history.vhd".
+    Found 8-bit register for signal <this_register>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <register_input_history> synthesized.
+
+
+Synthesizing Unit <register_convolution_filter_coefficient>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_convolution_filter_coefficient.vhd".
+    Found 1-bit register for signal <iAmZero>.
+    Found 1-bit register for signal <last_shifted_bit_was_set>.
+    Found 1-bit register for signal <sb>.
+    Found 8-bit register for signal <this_register>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <register_convolution_filter_coefficient> synthesized.
+
+
+Synthesizing Unit <register_filter_coefficient>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_filter_coefficient.vhd".
+    Found 1-bit xor2 for signal <shift_direction>.
+    Found 9-bit register for signal <this_register>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <register_filter_coefficient> synthesized.
+
+
+Synthesizing Unit <register_best_residual>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_best_residual.vhd".
+    Found 14-bit register for signal <this_register>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+Unit <register_best_residual> synthesized.
+
+
+Synthesizing Unit <register_best_filter_coefficient>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_best_filter_coefficient.vhd".
+    Found 9-bit register for signal <this_register>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <register_best_filter_coefficient> synthesized.
+
+
+Synthesizing Unit <clock_divider>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/clock_divider.vhd".
+Unit <clock_divider> synthesized.
+
+
+Synthesizing Unit <kBitCounter_1>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 4-bit register for signal <internal_count>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <kBitCounter_1> synthesized.
+
+
+Synthesizing Unit <kBitCounter_2>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 9-bit register for signal <internal_count>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <kBitCounter_2> synthesized.
+
+
+Synthesizing Unit <dac_single>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/dac_single.vhd".
+WARNING:Xst:646 - Signal <accum_carries<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit register for signal <accumulator>.
+    Found 8-bit register for signal <dac_sample>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <dac_single> synthesized.
+
+
+Synthesizing Unit <kBitCounter_3>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 2-bit register for signal <internal_count>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <kBitCounter_3> synthesized.
+
+
+Synthesizing Unit <kBitCounter_4>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 3-bit register for signal <internal_count>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <kBitCounter_4> synthesized.
+
+
+Synthesizing Unit <kBitCounter_5>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 5-bit register for signal <internal_count>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <kBitCounter_5> synthesized.
+
+
+Synthesizing Unit <register_convolution_input>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/register_convolution_input.vhd".
+WARNING:Xst:646 - Signal <carrys<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit register for signal <this_register>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <register_convolution_input> synthesized.
+
+
+Synthesizing Unit <accumulator_convolution>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/accumulator_convolution.vhd".
+WARNING:Xst:646 - Signal <ls_carrys<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <accumulator_carrys<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit register for signal <this_accumulator>.
+    Found 8-bit register for signal <this_output_register>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <accumulator_convolution> synthesized.
+
+
+Synthesizing Unit <kBitCounter_6>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd".
+    Found 6-bit register for signal <internal_count>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <kBitCounter_6> synthesized.
+
+
+Synthesizing Unit <fsm_adc>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd".
+    Found finite state machine <FSM_1> for signal <PresentState>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 9                                              |
+    | Clock              | sys_clk                   (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 11000                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit register for signal <daisyChain0>.
+    Found 3-bit register for signal <daisyChain1>.
+    Found 3-bit register for signal <daisyChain2>.
+    Found 3-bit register for signal <daisyChain3>.
+    Found 3-bit register for signal <daisyChain4>.
+    Found 8-bit register for signal <led_register>.
+    Found 8-bit register for signal <vin0_register>.
+    Found 8-bit register for signal <vin1_register>.
+    Found 8-bit register for signal <vin2_register>.
+    Found 8-bit register for signal <vin3_register>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  55 D-type flip-flop(s).
+Unit <fsm_adc> synthesized.
+
+
+Synthesizing Unit <fsm_input_history_shift>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_input_history_shift.vhd".
+WARNING:Xst:646 - Signal <shiftCount> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <PresentState>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <fsm_input_history_shift> synthesized.
+
+
+Synthesizing Unit <fsm_convolution>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_convolution.vhd".
+    Found finite state machine <FSM_2> for signal <PresentState_Multiplier>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | sys_clk                   (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <PresentState_Accumulator>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | sys_clk                   (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   2 Finite State Machine(s).
+Unit <fsm_convolution> synthesized.
+
+
+Synthesizing Unit <fsm_update_filter>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_update_filter.vhd".
+WARNING:Xst:646 - Signal <res_carrys<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <abs_carrys<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 14-bit register for signal <abs_error>.
+    Found 7-bit register for signal <PresentState>.
+    Found 14-bit register for signal <residual_accumulated>.
+    Summary:
+	inferred  35 D-type flip-flop(s).
+Unit <fsm_update_filter> synthesized.
+
+
+Synthesizing Unit <block_filter>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter.vhd".
+WARNING:Xst:646 - Signal <input_history_serial_chain<31>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <convolution_accumulator_serial_chain<31>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <block_filter> synthesized.
+
+
+Synthesizing Unit <block_filter_pair>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_filter_pair.vhd".
+Unit <block_filter_pair> synthesized.
+
+
+Synthesizing Unit <system_wiring>.
+    Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd".
+WARNING:Xst:1780 - Signal <dac_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 3-bit register for signal <daisyChain_ae>.
+    Found 3-bit register for signal <daisyChain_oe>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <system_wiring> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 614
+ 1-bit register                                        : 257
+ 11-bit register                                       : 66
+ 14-bit register                                       : 6
+ 16-bit register                                       : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 10
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 6-bit register                                        : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 137
+ 9-bit register                                        : 129
+# Xors                                                 : 1893
+ 1-bit xor2                                            : 980
+ 1-bit xor3                                            : 913
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <myFILTER/FSM3/PresentState_Accumulator/FSM> on signal <PresentState_Accumulator[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 001   | 00
+ 010   | 01
+ 100   | 11
+ 000   | 10
+-------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <myFILTER/FSM3/PresentState_Multiplier/FSM> on signal <PresentState_Multiplier[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 100   | 100
+ 010   | 010
+ 001   | 001
+ 000   | 000
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <myADC/PresentState/FSM> on signal <PresentState[1:7]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 11010 | 0000001
+ 11000 | 0000010
+ 11001 | 0000100
+ 01110 | 0001000
+ 01101 | 0010000
+ 11100 | 0100000
+ 10011 | 1000000
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <myFILTER/FSM1/PresentState/FSM> on signal <PresentState[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 001   | 00
+ 010   | 01
+ 100   | 11
+-------------------
+INFO:Xst:2261 - The FF/Latch <abs_error_5> in Unit <FSM4> is equivalent to the following 5 FFs/Latches, which will be removed : <abs_error_4> <abs_error_3> <abs_error_2> <abs_error_1> <abs_error_0> 
+INFO:Xst:2261 - The FF/Latch <abs_error_5> in Unit <FSM4> is equivalent to the following 5 FFs/Latches, which will be removed : <abs_error_4> <abs_error_3> <abs_error_2> <abs_error_1> <abs_error_0> 
+WARNING:Xst:1710 - FF/Latch <abs_error_5> (without init value) has a constant value of 0 in block <FSM4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <abs_error_5> (without init value) has a constant value of 0 in block <FSM4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <abs_error<0:7>> (without init value) have a constant value of 0 in block <fsm_update_filter>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 4
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 3411
+ Flip-Flops                                            : 3411
+# Xors                                                 : 1893
+ 1-bit xor2                                            : 980
+ 1-bit xor3                                            : 913
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <led_register_0> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_register_1> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_register_2> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_register_3> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_register_4> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_register_5> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_register_6> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_register_7> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain3_0> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain2_0> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain0_0> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain1_0> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain3_1> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain2_1> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain0_1> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain1_1> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain2_2> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain3_2> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain0_2> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain1_2> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <system_wiring> ...
+
+Optimizing unit <lfsr_maximal_xnor_64_bit> ...
+
+Optimizing unit <register_input_history> ...
+
+Optimizing unit <register_convolution_filter_coefficient> ...
+
+Optimizing unit <register_filter_coefficient> ...
+
+Optimizing unit <register_best_residual> ...
+
+Optimizing unit <register_best_filter_coefficient> ...
+
+Optimizing unit <kBitCounter_1> ...
+
+Optimizing unit <kBitCounter_2> ...
+
+Optimizing unit <dac_single> ...
+
+Optimizing unit <kBitCounter_5> ...
+
+Optimizing unit <register_convolution_input> ...
+
+Optimizing unit <accumulator_convolution> ...
+
+Optimizing unit <kBitCounter_6> ...
+
+Optimizing unit <block_filter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block system_wiring, actual ratio is 42.
+
+Final Macro Processing ...
+
+Processing Unit <system_wiring> :
+	Found 3-bit shift register for signal <daisyChain_ae_2>.
+	Found 3-bit shift register for signal <daisyChain_oe_2>.
+	Found 3-bit shift register for signal <myADC/daisyChain4_2>.
+Unit <system_wiring> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3400
+ Flip-Flops                                            : 3400
+# Shift Registers                                      : 3
+ 3-bit shift register                                  : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : system_wiring.ngr
+Top Level Output File Name         : system_wiring
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 6778
+#      GND                         : 1
+#      INV                         : 14
+#      LUT2                        : 1058
+#      LUT2_D                      : 3
+#      LUT2_L                      : 132
+#      LUT3                        : 2200
+#      LUT3_D                      : 74
+#      LUT3_L                      : 14
+#      LUT4                        : 2382
+#      LUT4_D                      : 281
+#      LUT4_L                      : 528
+#      MUXF5                       : 90
+#      VCC                         : 1
+# FlipFlops/Latches                : 3403
+#      FD                          : 7
+#      FDE                         : 2028
+#      FDR                         : 93
+#      FDRE                        : 1266
+#      FDRS                        : 3
+#      FDS                         : 6
+# Shift Registers                  : 3
+#      SRL16                       : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 19
+#      IBUF                        : 12
+#      IBUFG                       : 1
+#      OBUF                        : 6
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                     3542  out of   8672    40%  
+ Number of Slice Flip Flops:           3403  out of  17344    19%  
+ Number of 4 input LUTs:               6689  out of  17344    38%  
+    Number used as logic:              6686
+    Number used as Shift registers:       3
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    250     7%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)         | Load  |
+-----------------------------------+-------------------------------+-------+
+sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 3406  |
+-----------------------------------+-------------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 3.338ns (Maximum Frequency: 299.545MHz)
+   Minimum input arrival time before clock: 5.822ns
+   Maximum output required time after clock: 7.457ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk_50'
+  Clock period: 3.338ns (frequency: 299.545MHz)
+  Total number of paths / destination ports: 48762 / 6842
+-------------------------------------------------------------------------
+Delay:               8.346ns (Levels of Logic = 6)
+  Source:            DACR/accumulator_0 (FF)
+  Destination:       DACR/accumulator_0 (FF)
+  Source Clock:      sys_clk_50 rising 0.4X
+  Destination Clock: sys_clk_50 rising 0.4X
+
+  Data Path: DACR/accumulator_0 to DACR/accumulator_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            15   0.591   1.021  DACR/accumulator_0 (DACR/accumulator_0)
+     LUT4_D:I3->O          5   0.704   0.712  DACR/DACSampGen[4].DACSampX/Mxor_SumDiff_xo<0>11 (DACR/N41)
+     LUT3:I1->O            1   0.704   0.000  DACR/accumulator_mux0000<7>11_SW0_F (N2465)
+     MUXF5:I0->O           1   0.321   0.499  DACR/accumulator_mux0000<7>11_SW0 (N1993)
+     LUT3:I1->O            5   0.704   0.633  DACR/DACAccumGen[4].DACAccumX/Cout1 (DACR/accum_carries<7>)
+     MUXF5:S->O            3   0.739   0.706  DACR/accumulator_mux0000<3>11 (DACR/N3)
+     LUT4:I0->O            1   0.704   0.000  DACR/accumulator_mux0000<0> (DACR/accumulator_mux0000<0>)
+     FDRE:D                    0.308          DACR/accumulator_0
+    ----------------------------------------
+    Total                      8.346ns (4.775ns logic, 3.571ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_50'
+  Total number of paths / destination ports: 2599 / 2599
+-------------------------------------------------------------------------
+Offset:              5.822ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       DACR/accumulator_2 (FF)
+  Destination Clock: sys_clk_50 rising 0.4X
+
+  Data Path: reset to DACR/accumulator_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1851   1.218   1.585  reset_IBUF (reset_IBUF)
+     LUT3_D:I0->O         21   0.704   1.303  DACR/accumulator_mux0000<0>21 (DACR/N20)
+     LUT4:I0->O            1   0.704   0.000  DACR/accumulator_mux0000<5>2 (DACR/accumulator_mux0000<5>)
+     FDRE:D                    0.308          DACR/accumulator_5
+    ----------------------------------------
+    Total                      5.822ns (2.934ns logic, 2.888ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_50'
+  Total number of paths / destination ports: 17 / 6
+-------------------------------------------------------------------------
+Offset:              7.457ns (Levels of Logic = 3)
+  Source:            myADC/PresentState_FSM_FFd4 (FF)
+  Destination:       nSH (PAD)
+  Source Clock:      sys_clk_50 rising 0.4X
+
+  Data Path: myADC/PresentState_FSM_FFd4 to nSH
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             34   0.591   1.342  myADC/PresentState_FSM_FFd4 (myADC/PresentState_FSM_FFd4)
+     LUT3:I1->O            1   0.704   0.424  myADC/nSH_SW0 (N1711)
+     LUT4:I3->O            1   0.704   0.420  myADC/nSH (nSH_OBUF)
+     OBUF:I->O                 3.272          nSH_OBUF (nSH)
+    ----------------------------------------
+    Total                      7.457ns (5.271ns logic, 2.186ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.47 secs
+ 
+--> 
+
+Total memory usage is 277160 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  173 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

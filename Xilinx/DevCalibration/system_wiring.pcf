@@ -1,0 +1,26 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Mar 16 19:28:01 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "s0" LOCATE = SITE "R16" LEVEL 1;
+COMP "s1" LOCATE = SITE "P17" LEVEL 1;
+COMP "nRD" LOCATE = SITE "T18" LEVEL 1;
+COMP "nSH" LOCATE = SITE "U18" LEVEL 1;
+COMP "nInt" LOCATE = SITE "M15" LEVEL 1;
+COMP "databus<0>" LOCATE = SITE "G15" LEVEL 1;
+COMP "databus<1>" LOCATE = SITE "J16" LEVEL 1;
+COMP "databus<2>" LOCATE = SITE "G13" LEVEL 1;
+COMP "databus<3>" LOCATE = SITE "H16" LEVEL 1;
+COMP "databus<4>" LOCATE = SITE "H15" LEVEL 1;
+COMP "databus<5>" LOCATE = SITE "F14" LEVEL 1;
+COMP "databus<6>" LOCATE = SITE "G16" LEVEL 1;
+COMP "databus<7>" LOCATE = SITE "J12" LEVEL 1;
+COMP "reset" LOCATE = SITE "L13" LEVEL 1;
+COMP "async_ae" LOCATE = SITE "K17" LEVEL 1;
+COMP "sys_clk_50" LOCATE = SITE "B8" LEVEL 1;
+COMP "async_oe" LOCATE = SITE "N17" LEVEL 1;
+COMP "out_dac_l" LOCATE = SITE "K12" LEVEL 1;
+COMP "out_dac_r" LOCATE = SITE "L15" LEVEL 1;
+SCHEMATIC END;
+

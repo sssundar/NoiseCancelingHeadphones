@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\system_wiring.ncd
+OUTFILE=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\system_wiring.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration
+LICENSE=WebPack
+USER_INFO=211010628_0_0_052

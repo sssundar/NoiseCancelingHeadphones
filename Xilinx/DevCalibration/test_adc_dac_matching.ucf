@@ -17,7 +17,8 @@ NET "s0" SLEW = FAST;
 NET "s1" SLEW = FAST;
 
 NET "reset" IOSTANDARD = LVCMOS25;
-NET "oe" IOSTANDARD = LVCMOS25;
+NET "async_oe" IOSTANDARD = LVCMOS25;
+NET "async_ae" IOSTANDARD = LVCMOS25;
 
 NET "out_dac_l" IOSTANDARD = LVCMOS33;
 NET "out_dac_r" IOSTANDARD = LVCMOS33;
@@ -36,7 +37,8 @@ NET "databus[7]" IOSTANDARD = LVCMOS33;
 # PlanAhead Generated physical constraints 
 
 NET "reset" LOC = L13;
-NET "oe" LOC = N17;
+NET "async_oe" LOC = N17;
+NET "async_ae" LOC = K17;
 
 NET "out_dac_r" LOC = L15;
 NET "out_dac_l" LOC = K12;
