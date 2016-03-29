@@ -40,3 +40,9 @@ map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o system
 par -w -intstyle ise -ol std -t 1 system_wiring_map.ncd system_wiring.ncd system_wiring.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml system_wiring.twx system_wiring.ncd -o system_wiring.twr system_wiring.pcf -ucf test_adc_dac_matching.ucf 
 bitgen -intstyle ise -f system_wiring.ut system_wiring.ncd 
+xst -intstyle ise -ifn "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.xst" -ofn "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test_adc_dac_matching.ucf -p xc3s1200e-fg320-4 system_wiring.ngc system_wiring.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o system_wiring_map.ncd system_wiring.ngd system_wiring.pcf 
+par -w -intstyle ise -ol std -t 1 system_wiring_map.ncd system_wiring.ncd system_wiring.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml system_wiring.twx system_wiring.ncd -o system_wiring.twr system_wiring.pcf -ucf test_adc_dac_matching.ucf 
+bitgen -intstyle ise -f system_wiring.ut system_wiring.ncd 

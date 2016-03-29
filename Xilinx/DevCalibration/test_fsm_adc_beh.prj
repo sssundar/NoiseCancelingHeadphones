@@ -1,4 +1,0 @@
-vhdl work "AddSub.vhd"
-vhdl work "kBitCounter.vhd"
-vhdl work "fsm_adc.vhd"
-vhdl work "test_fsm_adc.vhd"

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: system_wiring.prj
 
@@ -141,8 +141,7 @@ Architecture dataflow of Entity block_filter is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/clock_divider.vhd" in Library work.
 Architecture behavioral of Entity clock_divider is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_serializer.vhd" in Library work.
-Entity <block_serializer> compiled.
-Entity <block_serializer> (Architecture <dataflow>) compiled.
+Architecture dataflow of Entity block_serializer is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" in Library work.
 Architecture dataflow of Entity fsm_adc is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/dac_single.vhd" in Library work.
@@ -412,17 +411,17 @@ WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xi
 WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 306: Unconnected output port 'count' of component 'kBitCounter'.
 WARNING:Xst:819 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 317: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <left_spk_dac_input>, <right_spk_dac_input>
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 395: Unconnected output port 'leds' of component 'fsm_adc'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 414: Unconnected output port 'out_dac1' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 414: Unconnected output port 'out_dac2' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 414: Unconnected output port 'out_dac3' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 414: Unconnected output port 'accumulator_state' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 414: Unconnected output port 'internal_sample_state' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 432: Unconnected output port 'out_dac1' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 432: Unconnected output port 'out_dac2' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 432: Unconnected output port 'out_dac3' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 432: Unconnected output port 'accumulator_state' of component 'dac_single'.
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 432: Unconnected output port 'internal_sample_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 403: Unconnected output port 'leds' of component 'fsm_adc'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 422: Unconnected output port 'out_dac1' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 422: Unconnected output port 'out_dac2' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 422: Unconnected output port 'out_dac3' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 422: Unconnected output port 'accumulator_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 422: Unconnected output port 'internal_sample_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 440: Unconnected output port 'out_dac1' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 440: Unconnected output port 'out_dac2' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 440: Unconnected output port 'out_dac3' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 440: Unconnected output port 'accumulator_state' of component 'dac_single'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/system_wiring.vhd" line 440: Unconnected output port 'internal_sample_state' of component 'dac_single'.
 Entity <system_wiring> analyzed. Unit <system_wiring> generated.
 
 Analyzing Entity <clock_divider> in library <work> (Architecture <behavioral>).
@@ -1041,6 +1040,8 @@ Optimizing FSM <myFILTER/FSM1/PresentState/FSM> on signal <PresentState[1:2]> wi
 INFO:Xst:2261 - The FF/Latch <latched_shift_reg_3_499> in Unit <DebugSerializer> is equivalent to the following 3 FFs/Latches, which will be removed : <latched_shift_reg_1_499> <latched_shift_reg_2_499> <latched_shift_reg_4_499> 
 INFO:Xst:2261 - The FF/Latch <abs_error_5> in Unit <FSM4> is equivalent to the following 5 FFs/Latches, which will be removed : <abs_error_4> <abs_error_3> <abs_error_2> <abs_error_1> <abs_error_0> 
 INFO:Xst:2261 - The FF/Latch <abs_error_5> in Unit <FSM4> is equivalent to the following 5 FFs/Latches, which will be removed : <abs_error_4> <abs_error_3> <abs_error_2> <abs_error_1> <abs_error_0> 
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_488> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_487> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_486> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_485> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_484> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1066,10 +1067,10 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_465> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_464> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_463> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_462> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_461> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_460> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_459> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_458> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_452> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_451> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_450> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_449> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_448> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_447> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_446> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1083,10 +1084,6 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_439> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_438> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_437> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_436> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_435> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_434> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_433> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_432> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_498> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_497> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_496> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1097,8 +1094,8 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_492> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_491> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_490> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_489> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_488> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_487> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_478> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_477> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_476> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_475> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_474> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1122,20 +1119,16 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_457> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_456> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_455> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_454> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_453> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_452> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_451> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_450> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <abs_error_5> (without init value) has a constant value of 0 in block <FSM4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <abs_error_5> (without init value) has a constant value of 0 in block <FSM4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_461> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_460> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_459> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_458> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_457> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_456> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_455> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_454> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_453> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_452> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_451> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_2_450> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_498> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_497> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_496> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1156,8 +1149,8 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_482> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_481> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_480> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_479> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_478> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_4_477> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_471> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_470> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_469> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_468> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_467> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1183,10 +1176,6 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_448> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_447> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_446> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_445> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_444> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_443> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_442> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_441> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_499> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_498> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_497> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1215,8 +1204,8 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_475> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_474> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_473> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_472> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_471> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_470> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_479> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_478> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_477> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_476> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_475> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1242,19 +1231,15 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_456> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_455> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_454> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_453> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_452> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_451> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_450> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_449> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_444> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_443> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_442> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_441> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_440> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_439> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_438> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_437> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_436> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_435> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_434> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_433> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_432> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_498> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_497> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_496> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1274,8 +1259,6 @@ WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_483> (without init value) has a
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_482> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_481> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_480> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_479> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_1_478> (without init value) has a constant value of 0 in block <DebugSerializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2404 -  FFs/Latches <abs_error<0:7>> (without init value) have a constant value of 0 in block <fsm_update_filter>.
 
 =========================================================================
@@ -1318,7 +1301,9 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain3_2> (wit
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain0_2> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <daisyChain1_2> (without init value) has a constant value of 0 in block <fsm_adc>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <latched_shift_reg_2_499> in Unit <block_serializer> is equivalent to the following 3 FFs/Latches, which will be removed : <latched_shift_reg_1_499> <latched_shift_reg_3_499> <latched_shift_reg_4_499> 
-WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_469> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <latched_shift_reg_3_471> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_470> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_469> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_468> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_467> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_466> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1343,10 +1328,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_447> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_446> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_445> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_444> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_443> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_442> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_441> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_498> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_497> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_496> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1374,8 +1355,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_474> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_473> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_472> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_471> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_470> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_480> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_479> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_478> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_477> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_476> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1401,19 +1382,15 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_456> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_455> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_454> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_453> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_452> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_451> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_450> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_444> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_443> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_442> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_441> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_440> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_439> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_438> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_437> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_436> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_435> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_434> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_433> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_3_432> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_498> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_497> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_496> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1432,8 +1409,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_483> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_482> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_481> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_480> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_4_479> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_472> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_471> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_470> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_469> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_468> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1451,10 +1428,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_456> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_455> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_454> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_453> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_452> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_451> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_450> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_498> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_497> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_496> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1490,8 +1463,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_475> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_474> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_473> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_472> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_2_471> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_462> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_461> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_460> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_459> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_458> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1517,10 +1490,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_438> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_437> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_436> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_435> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_434> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_433> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_432> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_490> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_489> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_488> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
@@ -1549,8 +1518,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_465> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_464> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_463> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_462> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <latched_shift_reg_1_461> (without init value) has a constant value of 0 in block <block_serializer>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <system_wiring> ...
 
@@ -1600,8 +1567,8 @@ Unit <system_wiring> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 5182
- Flip-Flops                                            : 5182
+# Registers                                            : 5198
+ Flip-Flops                                            : 5198
 # Shift Registers                                      : 3
  3-bit shift register                                  : 3
 
@@ -1632,29 +1599,29 @@ Design Statistics
 # IOs                              : 26
 
 Cell Usage :
-# BELS                             : 8596
+# BELS                             : 8604
 #      GND                         : 1
 #      INV                         : 15
 #      LUT1                        : 8
-#      LUT2                        : 1071
+#      LUT2                        : 1079
 #      LUT2_D                      : 1
 #      LUT2_L                      : 132
-#      LUT3                        : 3959
+#      LUT3                        : 3957
 #      LUT3_D                      : 73
-#      LUT3_L                      : 10
-#      LUT4                        : 2396
-#      LUT4_D                      : 151
+#      LUT3_L                      : 12
+#      LUT4                        : 2397
+#      LUT4_D                      : 150
 #      LUT4_L                      : 671
 #      MUXCY                       : 8
 #      MUXF5                       : 90
 #      VCC                         : 1
 #      XORCY                       : 9
-# FlipFlops/Latches                : 5185
-#      FD                          : 1789
+# FlipFlops/Latches                : 5201
+#      FD                          : 25
 #      FDE                         : 2028
-#      FDR                         : 97
+#      FDR                         : 1869
 #      FDRE                        : 1266
-#      FDRS                        : 1
+#      FDRS                        : 9
 #      FDS                         : 4
 # Shift Registers                  : 3
 #      SRL16                       : 3
@@ -1673,10 +1640,10 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     4575  out of   8672    52%  
- Number of Slice Flip Flops:           5185  out of  17344    29%  
- Number of 4 input LUTs:               8490  out of  17344    48%  
-    Number used as logic:              8487
+ Number of Slices:                     4580  out of   8672    52%  
+ Number of Slice Flip Flops:           5201  out of  17344    29%  
+ Number of 4 input LUTs:               8498  out of  17344    48%  
+    Number used as logic:              8495
     Number used as Shift registers:       3
  Number of IOs:                          26
  Number of bonded IOBs:                  26  out of    250    10%  
@@ -1704,7 +1671,7 @@ Clock Information:
 -----------------------------------+-------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)         | Load  |
 -----------------------------------+-------------------------------+-------+
-sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 5188  |
+sys_clk_50                         | ClockManager/DCM_SP_INST:CLKFX| 5204  |
 -----------------------------------+-------------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1727,7 +1694,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sys_clk_50'
   Clock period: 3.441ns (frequency: 290.596MHz)
-  Total number of paths / destination ports: 67842 / 8627
+  Total number of paths / destination ports: 68002 / 8651
 -------------------------------------------------------------------------
 Delay:               8.603ns (Levels of Logic = 4)
   Source:            FiveTwelveCounter/internal_count_8 (FF)
@@ -1742,7 +1709,7 @@ Delay:               8.603ns (Levels of Logic = 4)
      FDR:C->Q              5   0.591   0.637  FiveTwelveCounter/internal_count_8 (FiveTwelveCounter/internal_count_8)
      LUT4:I3->O            6   0.704   0.748  FiveTwelveCounter/Sum<0>21 (FiveTwelveCounter/Sum<0>_bdd2)
      LUT3:I1->O            4   0.704   0.591  FiveTwelveCounter/carrys<0>_SW0 (N1413)
-     LUT4:I3->O         1793   0.704   1.489  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
+     LUT4:I3->O         1801   0.704   1.489  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
      LUT2:I1->O            9   0.704   0.820  DebugSerializer/shiftCounter/internal_count_or00001 (DebugSerializer/shiftCounter/internal_count_or0000)
      FDR:R                     0.911          DebugSerializer/shiftCounter/internal_count_0
     ----------------------------------------
@@ -1751,23 +1718,23 @@ Delay:               8.603ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_50'
-  Total number of paths / destination ports: 2618 / 2614
+  Total number of paths / destination ports: 4398 / 4394
 -------------------------------------------------------------------------
 Offset:              7.183ns (Levels of Logic = 5)
   Source:            reset (PAD)
-  Destination:       DebugSerializer/latched_shift_reg_4_444 (FF)
+  Destination:       DebugSerializer/latched_shift_reg_4_448 (FF)
   Destination Clock: sys_clk_50 rising 0.4X
 
-  Data Path: reset to DebugSerializer/latched_shift_reg_4_444
+  Data Path: reset to DebugSerializer/latched_shift_reg_4_448
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1862   1.218   1.585  reset_IBUF (reset_IBUF)
+     IBUF:I->O          3642   1.218   1.585  reset_IBUF (reset_IBUF)
      LUT3_D:I0->LO         1   0.704   0.179  myFILTER/RIGHTFILTER/FSM4/NextState<1>11 (N3099)
      LUT4:I1->O            1   0.704   0.595  myFILTER/RIGHTFILTER/FSM4/NextState<1>_SW0_SW0 (N1653)
      LUT4:I0->O            2   0.704   0.482  myFILTER/RIGHTFILTER/FSM4/NextState<1> (right_next_fsm_state<1>)
-     LUT3:I2->O            1   0.704   0.000  DebugSerializer/latched_shift_reg_4_mux0001<444>1 (DebugSerializer/latched_shift_reg_4_mux0001<444>)
-     FD:D                      0.308          DebugSerializer/latched_shift_reg_4_444
+     LUT3:I2->O            1   0.704   0.000  DebugSerializer/latched_shift_reg_4_mux0002<448>1 (DebugSerializer/latched_shift_reg_4_mux0002<448>)
+     FDR:D                     0.308          DebugSerializer/latched_shift_reg_4_448
     ----------------------------------------
     Total                      7.183ns (4.342ns logic, 2.841ns route)
                                        (60.4% logic, 39.6% route)
@@ -1788,7 +1755,7 @@ Offset:              9.361ns (Levels of Logic = 4)
      FDR:C->Q              5   0.591   0.637  FiveTwelveCounter/internal_count_8 (FiveTwelveCounter/internal_count_8)
      LUT4:I3->O            6   0.704   0.748  FiveTwelveCounter/Sum<0>21 (FiveTwelveCounter/Sum<0>_bdd2)
      LUT3:I1->O            4   0.704   0.591  FiveTwelveCounter/carrys<0>_SW0 (N1413)
-     LUT4:I3->O         1793   0.704   1.410  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
+     LUT4:I3->O         1801   0.704   1.410  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
      OBUF:I->O                 3.272          trigger_on_sample_tick_OBUF (trigger_on_sample_tick)
     ----------------------------------------
     Total                      9.361ns (5.975ns logic, 3.386ns route)
@@ -1797,14 +1764,14 @@ Offset:              9.361ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 35.00 secs
-Total CPU time to Xst completion: 34.58 secs
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 33.51 secs
  
 --> 
 
-Total memory usage is 311312 kilobytes
+Total memory usage is 312080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  632 (   0 filtered)
+Number of warnings :  600 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 

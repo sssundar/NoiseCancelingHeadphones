@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Mar 29 11:29:05 2016">
+<application name="pn" timeStamp="Tue Mar 29 16:12:30 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="FFBCD696D00D4F2CA24631E070A7437B" type="project"/>
-<property name="ProjectIteration" value="23" type="project"/>
+<property name="ProjectIteration" value="24" type="project"/>
 <property name="ProjectFile" value="D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/DevCalibration.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-02-12T23:47:31" type="project"/>
 </section>
@@ -19,7 +19,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_ProjectDescription" value="Working project directory for the calibration block (DAC, ADC, Sin Generator)" type="process"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/test_dac_hardware/DAC" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/test_serializer" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -27,11 +27,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-02-12T23:47:31" type="design"/>
 <property name="PROP_intWbtProjectID" value="FFBCD696D00D4F2CA24631E070A7437B" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="23" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="24" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.dac_single" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.test_serializer" type="process"/>
 <property name="PROP_xilxBitgStart_Clk" value="JTAG Clock" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
@@ -45,7 +45,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-4" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
 <property name="FILE_UCF" value="2" type="source"/>
-<property name="FILE_VHDL" value="31" type="source"/>
+<property name="FILE_VHDL" value="32" type="source"/>
 <property name="FILE_XAW" value="1" type="source"/>
 </section>
 </application>

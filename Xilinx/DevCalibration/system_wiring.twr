@@ -45,18 +45,18 @@ Setup/Hold to clock sys_clk_50
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-async_ae    |    4.529(R)|   -2.221(R)|sys_clk_20        |   0.000|
-async_oe    |    4.946(R)|   -2.553(R)|sys_clk_20        |   0.000|
-databus<0>  |    3.712(R)|   -1.965(R)|sys_clk_20        |   0.000|
-databus<1>  |    4.071(R)|   -2.251(R)|sys_clk_20        |   0.000|
-databus<2>  |    3.189(R)|   -1.540(R)|sys_clk_20        |   0.000|
-databus<3>  |    4.050(R)|   -2.229(R)|sys_clk_20        |   0.000|
-databus<4>  |    4.276(R)|   -2.424(R)|sys_clk_20        |   0.000|
-databus<5>  |    3.992(R)|   -2.196(R)|sys_clk_20        |   0.000|
-databus<6>  |    3.422(R)|   -1.731(R)|sys_clk_20        |   0.000|
-databus<7>  |    3.624(R)|   -1.893(R)|sys_clk_20        |   0.000|
-nInt        |    3.539(R)|   -1.497(R)|sys_clk_20        |   0.000|
-reset       |   12.764(R)|   -1.501(R)|sys_clk_20        |   0.000|
+async_ae    |    4.483(R)|   -2.180(R)|sys_clk_20        |   0.000|
+async_oe    |    4.073(R)|   -1.856(R)|sys_clk_20        |   0.000|
+databus<0>  |    3.176(R)|   -1.533(R)|sys_clk_20        |   0.000|
+databus<1>  |    4.263(R)|   -2.404(R)|sys_clk_20        |   0.000|
+databus<2>  |    3.438(R)|   -1.741(R)|sys_clk_20        |   0.000|
+databus<3>  |    3.985(R)|   -2.179(R)|sys_clk_20        |   0.000|
+databus<4>  |    3.991(R)|   -2.202(R)|sys_clk_20        |   0.000|
+databus<5>  |    4.240(R)|   -2.402(R)|sys_clk_20        |   0.000|
+databus<6>  |    4.221(R)|   -2.382(R)|sys_clk_20        |   0.000|
+databus<7>  |    4.462(R)|   -2.576(R)|sys_clk_20        |   0.000|
+nInt        |    3.255(R)|   -1.268(R)|sys_clk_20        |   0.000|
+reset       |   12.416(R)|   -1.663(R)|sys_clk_20        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock sys_clk_50 to Pad
@@ -64,19 +64,19 @@ Clock sys_clk_50 to Pad
                       | clk (edge) |                  | Clock  |
 Destination           |   to PAD   |Internal Clock(s) | Phase  |
 ----------------------+------------+------------------+--------+
-end_serializer        |    7.919(R)|sys_clk_20        |   0.000|
-nRD                   |    8.272(R)|sys_clk_20        |   0.000|
-nSH                   |    8.413(R)|sys_clk_20        |   0.000|
-out_dac_l             |    8.826(R)|sys_clk_20        |   0.000|
-out_dac_r             |    8.428(R)|sys_clk_20        |   0.000|
-s0                    |    5.942(R)|sys_clk_20        |   0.000|
-s1                    |    5.166(R)|sys_clk_20        |   0.000|
-serial_left_1         |    5.463(R)|sys_clk_20        |   0.000|
-serial_left_2         |    5.851(R)|sys_clk_20        |   0.000|
-serial_right_1        |    7.367(R)|sys_clk_20        |   0.000|
-serial_right_2        |    5.954(R)|sys_clk_20        |   0.000|
-trigger_on_sample_tick|   13.298(R)|sys_clk_20        |   0.000|
-trigger_on_sys_clk_20 |    4.247(R)|sys_clk_20        |   0.000|
+end_serializer        |    8.131(R)|sys_clk_20        |   0.000|
+nRD                   |    9.440(R)|sys_clk_20        |   0.000|
+nSH                   |    9.331(R)|sys_clk_20        |   0.000|
+out_dac_l             |    8.668(R)|sys_clk_20        |   0.000|
+out_dac_r             |    9.203(R)|sys_clk_20        |   0.000|
+s0                    |    5.550(R)|sys_clk_20        |   0.000|
+s1                    |    4.233(R)|sys_clk_20        |   0.000|
+serial_left_1         |    5.270(R)|sys_clk_20        |   0.000|
+serial_left_2         |    5.177(R)|sys_clk_20        |   0.000|
+serial_right_1        |    5.089(R)|sys_clk_20        |   0.000|
+serial_right_2        |    5.409(R)|sys_clk_20        |   0.000|
+trigger_on_sample_tick|   11.991(R)|sys_clk_20        |   0.000|
+trigger_on_sys_clk_20 |    4.249(R)|sys_clk_20        |   0.000|
 ----------------------+------------+------------------+--------+
 
 Clock to Setup on destination clock sys_clk_50
@@ -84,18 +84,18 @@ Clock to Setup on destination clock sys_clk_50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sys_clk_50     |   10.607|         |         |         |
+sys_clk_50     |    9.551|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Mar 29 11:32:04 2016 
+Analysis completed Tue Mar 29 16:14:10 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 205 MB
+Peak Memory Usage: 207 MB
 
 
 

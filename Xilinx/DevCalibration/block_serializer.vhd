@@ -106,19 +106,26 @@ begin
 	serial_3 <= latched_shift_reg_3(0);
 	serial_4 <= latched_shift_reg_4(0);
 	
-	process (sys_clk)
+	process (sys_clk, sample_tick, reset, input_register_1, input_register_2, input_register_3, input_register_4)
 	begin
 		if (rising_edge(sys_clk)) then
-			if (sample_tick = '1') then
-				latched_shift_reg_1 <= input_register_1;
-				latched_shift_reg_2 <= input_register_2;
-				latched_shift_reg_3 <= input_register_3;
-				latched_shift_reg_4 <= input_register_4;
-			else 
-				latched_shift_reg_1(0 to toSerialize) <= latched_shift_reg_1(1 to toSerialize) & '0';
-				latched_shift_reg_2(0 to toSerialize) <= latched_shift_reg_2(1 to toSerialize) & '0';
-				latched_shift_reg_3(0 to toSerialize) <= latched_shift_reg_3(1 to toSerialize) & '0';
-				latched_shift_reg_4(0 to toSerialize) <= latched_shift_reg_4(1 to toSerialize) & '0';
+			if (reset = '1') then
+				latched_shift_reg_1 <= (0 to toSerialize => '0');
+				latched_shift_reg_2 <= (0 to toSerialize => '0');
+				latched_shift_reg_3 <= (0 to toSerialize => '0');
+				latched_shift_reg_4 <= (0 to toSerialize => '0');
+			else
+				if (sample_tick = '1') then
+					latched_shift_reg_1 <= input_register_1;
+					latched_shift_reg_2 <= input_register_2;
+					latched_shift_reg_3 <= input_register_3;
+					latched_shift_reg_4 <= input_register_4;
+				else 
+					latched_shift_reg_1(0 to toSerialize) <= latched_shift_reg_1(1 to toSerialize) & '0';
+					latched_shift_reg_2(0 to toSerialize) <= latched_shift_reg_2(1 to toSerialize) & '0';
+					latched_shift_reg_3(0 to toSerialize) <= latched_shift_reg_3(1 to toSerialize) & '0';
+					latched_shift_reg_4(0 to toSerialize) <= latched_shift_reg_4(1 to toSerialize) & '0';
+				end if;
 			end if;
 		end if;
 	end process;

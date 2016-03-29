@@ -1,24 +1,24 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_fsm_adc_isim_beh.exe -prj D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_fsm_adc_beh.prj work.test_fsm_adc 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_serializer_isim_beh.exe -prj D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_serializer_beh.prj work.test_serializer 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/AddSub.vhd" into library work
-Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/kBitCounter.vhd" into library work
-Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" into library work
-Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_fsm_adc.vhd" into library work
+Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/nCounter.vhd" into library work
+Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/magic_numbers.vhd" into library work
+Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_serializer.vhd" into library work
+Parsing VHDL file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_serializer.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling architecture dataflow of entity AddSub [addsub_default]
-Compiling architecture dataflow of entity kBitCounter [\kBitCounter(2)\]
-Compiling architecture dataflow of entity kBitCounter [\kBitCounter(3)\]
-Compiling architecture dataflow of entity fsm_adc [fsm_adc_default]
-Compiling architecture test_fsm_adc_tbarch of entity test_fsm_adc
+Compiling package math_real
+Compiling package magic_numbers
+Compiling architecture dataflow of entity nCounter [\nCounter(499)\]
+Compiling architecture dataflow of entity block_serializer [block_serializer_default]
+Compiling architecture test_serializer_tbarch of entity test_serializer
 Time Resolution for simulation is 1ps.
-Compiled 12 VHDL Units
-Built simulation executable D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_fsm_adc_isim_beh.exe
-Fuse Memory Usage: 35332 KB
-Fuse CPU Usage: 453 ms
+Compiled 10 VHDL Units
+Built simulation executable D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_serializer_isim_beh.exe
+Fuse Memory Usage: 35244 KB
+Fuse CPU Usage: 421 ms

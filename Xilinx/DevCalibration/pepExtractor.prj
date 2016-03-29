@@ -1,3 +1,3 @@
-work	"AddSub.vhd"
-work	"fsm_adc.vhd"
-work	"kBitCounter.vhd"
+work	"block_serializer.vhd"
+work	"magic_numbers.vhd"
+work	"nCounter.vhd"

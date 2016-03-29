@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_fsm_adc_isim_beh.exe" -prj "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_fsm_adc_beh.prj" "work.test_fsm_adc" 
+-intstyle "ise" -incremental -o "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_serializer_isim_beh.exe" -prj "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/test_serializer_beh.prj" "work.test_serializer" 
