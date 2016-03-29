@@ -92,6 +92,7 @@ architecture  structural  of  system_wiring  is
 			sys_clk : in std_logic;
 			sample_tick : in std_logic;				
 			end_serialization : out std_logic;
+			ddr_serial_clock : out std_logic;
 			input_register_1 : in std_logic_vector(0 to toSerialize);		
 			input_register_2 : in std_logic_vector(0 to toSerialize);		
 			input_register_3 : in std_logic_vector(0 to toSerialize);		
@@ -372,7 +373,7 @@ begin
 		serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize) <= (FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize => '0');		
 
 	end process assignSerialIR;
-	trigger_on_sys_clk_20 <= sys_clk_20;
+	
 	trigger_on_sample_tick <= sample_tick;	
 	DebugSerializer: block_serializer
 		 port map (			
@@ -380,6 +381,7 @@ begin
 			sys_clk => sys_clk_20,
 			sample_tick => sample_tick,
 			end_serialization => end_serializer,
+			ddr_serial_clock => trigger_on_sys_clk_20,
 			input_register_1 => serial_ir_left_1, 
 			input_register_2 => serial_ir_left_2, 
 			input_register_3 => serial_ir_right_1, 

@@ -1,2 +1,3 @@
 vhdl work "nCounter.vhd"
+vhdl work "magic_numbers.vhd"
 vhdl work "block_serializer.vhd"

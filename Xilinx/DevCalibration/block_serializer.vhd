@@ -30,9 +30,10 @@ entity  block_serializer  is
 		-- Inputs -- 
 		-- active high control signals
 		reset : in std_logic;
-		sys_clk : in std_logic;
+		sys_clk : in std_logic;		
 		sample_tick : in std_logic;				
 		end_serialization : out std_logic;
+		ddr_serial_clock : out std_logic;
 		
 		input_register_1 : in std_logic_vector(0 to toSerialize);		
 		input_register_2 : in std_logic_vector(0 to toSerialize);		
@@ -68,8 +69,23 @@ architecture  dataflow  of  block_serializer  is
 	signal latched_shift_reg_2 : std_logic_vector(0 to toSerialize);
 	signal latched_shift_reg_3 : std_logic_vector(0 to toSerialize);
 	signal latched_shift_reg_4 : std_logic_vector(0 to toSerialize);
-		
+	
+	-- Double Data Rate (both edges) serial clock, synchronous
+	signal ddr : std_logic;
+	
 begin
+	
+	ddr_serial_clock <= ddr;	
+	process (sys_clk, sample_tick)
+	begin
+		if (rising_edge(sys_clk)) then
+			if (sample_tick = '0') then				
+				ddr <= not ddr;
+			else
+				ddr <= '0';
+			end if;
+		end if;
+	end process;
 	
 	shiftCounter: nCounter	
 		generic map ( n => toSerialize )
