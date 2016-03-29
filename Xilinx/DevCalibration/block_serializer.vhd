@@ -77,11 +77,15 @@ begin
 	
 	ddr_serial_clock <= ddr;	
 	process (sys_clk, sample_tick)
-	begin
-		if (rising_edge(sys_clk)) then
-			if (sample_tick = '0') then				
-				ddr <= not ddr;
-			else
+	begin		
+		if (rising_edge(sys_clk)) then			
+			if (reset = '0') then
+				if (ddr = '1') then
+					ddr <= '0';
+				else 
+					ddr <= '1';
+				end if;
+			else 						
 				ddr <= '0';
 			end if;
 		end if;

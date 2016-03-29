@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: system_wiring.prj
 
@@ -141,7 +141,8 @@ Architecture dataflow of Entity block_filter is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/clock_divider.vhd" in Library work.
 Architecture behavioral of Entity clock_divider is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_serializer.vhd" in Library work.
-Architecture dataflow of Entity block_serializer is up to date.
+Entity <block_serializer> compiled.
+Entity <block_serializer> (Architecture <dataflow>) compiled.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/fsm_adc.vhd" in Library work.
 Architecture dataflow of Entity fsm_adc is up to date.
 Compiling vhdl file "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/dac_single.vhd" in Library work.
@@ -458,7 +459,7 @@ Analyzing generic Entity <kBitCounter.2> in library <work> (Architecture <datafl
 Entity <kBitCounter.2> analyzed. Unit <kBitCounter.2> generated.
 
 Analyzing Entity <block_serializer> in library <work> (Architecture <dataflow>).
-WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_serializer.vhd" line 90: Unconnected output port 'count' of component 'nCounter'.
+WARNING:Xst:753 - "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_serializer.vhd" line 94: Unconnected output port 'count' of component 'nCounter'.
 Entity <block_serializer> analyzed. Unit <block_serializer> generated.
 
 Analyzing generic Entity <nCounter.1> in library <work> (Architecture <dataflow>).
@@ -781,7 +782,6 @@ Unit <kBitCounter_2> synthesized.
 
 Synthesizing Unit <block_serializer>.
     Related source file is "D:/Users/Sushant/Documents/GitHub/NoiseCancelingHeadphones/Xilinx/DevCalibration/block_serializer.vhd".
-WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <ddr>.
     Found 500-bit register for signal <latched_shift_reg_1>.
     Found 500-bit register for signal <latched_shift_reg_2>.
@@ -1634,9 +1634,9 @@ Design Statistics
 Cell Usage :
 # BELS                             : 8596
 #      GND                         : 1
-#      INV                         : 16
+#      INV                         : 15
 #      LUT1                        : 8
-#      LUT2                        : 1070
+#      LUT2                        : 1071
 #      LUT2_D                      : 1
 #      LUT2_L                      : 132
 #      LUT3                        : 3959
@@ -1673,7 +1673,7 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     4574  out of   8672    52%  
+ Number of Slices:                     4575  out of   8672    52%  
  Number of Slice Flip Flops:           5185  out of  17344    29%  
  Number of 4 input LUTs:               8490  out of  17344    48%  
     Number used as logic:              8487
@@ -1727,7 +1727,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sys_clk_50'
   Clock period: 3.441ns (frequency: 290.596MHz)
-  Total number of paths / destination ports: 67851 / 8628
+  Total number of paths / destination ports: 67842 / 8627
 -------------------------------------------------------------------------
 Delay:               8.603ns (Levels of Logic = 4)
   Source:            FiveTwelveCounter/internal_count_8 (FF)
@@ -1742,7 +1742,7 @@ Delay:               8.603ns (Levels of Logic = 4)
      FDR:C->Q              5   0.591   0.637  FiveTwelveCounter/internal_count_8 (FiveTwelveCounter/internal_count_8)
      LUT4:I3->O            6   0.704   0.748  FiveTwelveCounter/Sum<0>21 (FiveTwelveCounter/Sum<0>_bdd2)
      LUT3:I1->O            4   0.704   0.591  FiveTwelveCounter/carrys<0>_SW0 (N1413)
-     LUT4:I3->O         1794   0.704   1.489  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
+     LUT4:I3->O         1793   0.704   1.489  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
      LUT2:I1->O            9   0.704   0.820  DebugSerializer/shiftCounter/internal_count_or00001 (DebugSerializer/shiftCounter/internal_count_or0000)
      FDR:R                     0.911          DebugSerializer/shiftCounter/internal_count_0
     ----------------------------------------
@@ -1751,7 +1751,7 @@ Delay:               8.603ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_50'
-  Total number of paths / destination ports: 2617 / 2613
+  Total number of paths / destination ports: 2618 / 2614
 -------------------------------------------------------------------------
 Offset:              7.183ns (Levels of Logic = 5)
   Source:            reset (PAD)
@@ -1762,7 +1762,7 @@ Offset:              7.183ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1861   1.218   1.585  reset_IBUF (reset_IBUF)
+     IBUF:I->O          1862   1.218   1.585  reset_IBUF (reset_IBUF)
      LUT3_D:I0->LO         1   0.704   0.179  myFILTER/RIGHTFILTER/FSM4/NextState<1>11 (N3099)
      LUT4:I1->O            1   0.704   0.595  myFILTER/RIGHTFILTER/FSM4/NextState<1>_SW0_SW0 (N1653)
      LUT4:I0->O            2   0.704   0.482  myFILTER/RIGHTFILTER/FSM4/NextState<1> (right_next_fsm_state<1>)
@@ -1788,7 +1788,7 @@ Offset:              9.361ns (Levels of Logic = 4)
      FDR:C->Q              5   0.591   0.637  FiveTwelveCounter/internal_count_8 (FiveTwelveCounter/internal_count_8)
      LUT4:I3->O            6   0.704   0.748  FiveTwelveCounter/Sum<0>21 (FiveTwelveCounter/Sum<0>_bdd2)
      LUT3:I1->O            4   0.704   0.591  FiveTwelveCounter/carrys<0>_SW0 (N1413)
-     LUT4:I3->O         1794   0.704   1.410  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
+     LUT4:I3->O         1793   0.704   1.410  FiveTwelveCounter/carrys<0> (trigger_on_sample_tick_OBUF)
      OBUF:I->O                 3.272          trigger_on_sample_tick_OBUF (trigger_on_sample_tick)
     ----------------------------------------
     Total                      9.361ns (5.975ns logic, 3.386ns route)
@@ -1797,14 +1797,14 @@ Offset:              9.361ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 34.00 secs
-Total CPU time to Xst completion: 34.00 secs
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 34.58 secs
  
 --> 
 
 Total memory usage is 311312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  633 (   0 filtered)
+Number of warnings :  632 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 
