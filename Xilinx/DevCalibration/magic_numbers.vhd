@@ -75,7 +75,8 @@ package magic_numbers is
 	constant FSM_CAS_OUTPUT_HOT_INDEX : integer := 0;
 	
 	-- Filter Update Block FSM States
-	subtype  FSM_FILTER_UPDATE_BLOCK_STATE is std_logic_vector(0 to 6);	
+	subtype  FSM_FILTER_UPDATE_BLOCK_STATE is std_logic_vector(0 to 6);
+	constant FSM_FILTER_UPDATE_BLOCK_STATE_BITS : integer := 7;
 	constant FSM_FUB_WAIT : 		FSM_FILTER_UPDATE_BLOCK_STATE := "1000000";
 	constant FSM_FUB_ABS : 			FSM_FILTER_UPDATE_BLOCK_STATE := "0100000";
 	constant FSM_FUB_ADD : 			FSM_FILTER_UPDATE_BLOCK_STATE := "0010000";
@@ -106,7 +107,9 @@ package magic_numbers is
 	
 	-- number of filter coefficients, number of samples stored in input history
 	-- required to be a power of two 0 < FILTER_FIR_LENGTH <= 32 for simple recognition in counters.	
-	constant FILTER_FIR_LENGTH : integer := 32;	
+	constant FILTER_FIR_LENGTH : integer := 32;
+	constant HALF_FILTER_FIR_LENGTH : integer := 16;
+	
 	constant LOG2_FIR_LENGTH : integer := 5;	
 	constant FILTER_CONVOLUTION_ACCUMULATE_SAMPLE_COUNTER_BITS : integer := LOG2_FIR_LENGTH;
 	constant FILTER_CONVOLUTION_ACCUMULATE_SHIFT_COUNTER_TARGET : integer := ADC_DATA_BITS + FILTER_SHIFT_MULTIPLIER_PRECISION_BITS - 1;
@@ -146,6 +149,14 @@ package magic_numbers is
 	-- DAC Block --
 	---------------
 	
+	
+	
+	---------------
+	-- Debugging --
+	---------------
+	
+	-- Number of bits to serialize per parallel output port for hardware filter test --
+	constant toSerialize : integer := 499;
 	
 end magic_numbers;
 

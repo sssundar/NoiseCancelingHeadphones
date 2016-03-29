@@ -1,0 +1,2 @@
+vhdl work "nCounter.vhd"
+vhdl work "block_serializer.vhd"

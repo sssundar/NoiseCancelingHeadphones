@@ -9,37 +9,37 @@ Target Device  : xc3s1200e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Mar 16 20:42:23 2016
+Mapped Date    : Tue Mar 29 09:47:45 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:         3,411 out of  17,344   19%
-  Number of 4 input LUTs:             6,678 out of  17,344   38%
+  Number of Slice Flip Flops:         5,184 out of  17,344   29%
+  Number of 4 input LUTs:             8,470 out of  17,344   48%
 Logic Distribution:
-  Number of occupied Slices:          3,642 out of   8,672   41%
-    Number of Slices containing only related logic:   3,642 out of   3,642 100%
-    Number of Slices containing unrelated logic:          0 out of   3,642   0%
+  Number of occupied Slices:          4,578 out of   8,672   52%
+    Number of Slices containing only related logic:   4,578 out of   4,578 100%
+    Number of Slices containing unrelated logic:          0 out of   4,578   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       6,741 out of  17,344   38%
-    Number used as logic:             6,675
-    Number used as a route-thru:         63
+  Total Number of 4 input LUTs:       8,541 out of  17,344   49%
+    Number used as logic:             8,467
+    Number used as a route-thru:         71
     Number used as Shift registers:       3
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 19 out of     250    7%
+  Number of bonded IOBs:                 26 out of     250   10%
   Number of BUFGMUXs:                     2 out of      24    8%
   Number of DCMs:                         1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                3.88
+Average Fanout of Non-Clock Nets:                3.70
 
-Peak Memory Usage:  240 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  242 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 
@@ -120,6 +120,7 @@ Section 6 - IOB Properties
 | databus<5>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | databus<6>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | databus<7>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| end_serializer                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
 | nInt                               | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | nRD                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
 | nSH                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
@@ -128,7 +129,13 @@ Section 6 - IOB Properties
 | reset                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | s0                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
 | s1                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
+| serial_left_1                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
+| serial_left_2                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
+| serial_right_1                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
+| serial_right_2                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
 | sys_clk_50                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| trigger_on_sample_tick             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
+| trigger_on_sys_clk_20              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

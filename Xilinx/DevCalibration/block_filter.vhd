@@ -54,7 +54,12 @@ entity  block_filter  is
 		
 		-- Test Outputs: leave open -- 
 		best_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
-		working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY
+		working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
+		observe_input_history_registers : out HISTORY_REGISTER_ARRAY;
+		observe_the_best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		observe_current_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		observe_myPresentState : out FSM_FILTER_UPDATE_BLOCK_STATE;
+		observe_myNextState : out FSM_FILTER_UPDATE_BLOCK_STATE
     );
 end  block_filter;
 
@@ -190,6 +195,7 @@ begin
 -- Wire up test outputs --
 best_filter_coefficients <= best_coeffs;
 working_filter_coefficients <= working_coeffs;
+observe_input_history_registers <= input_history_registers;
 
 -- Instantiate Components -- 
 FSM4: fsm_update_filter
@@ -203,10 +209,10 @@ FSM4: fsm_update_filter
 		reset_working_to_best_filter => working_replace_with_best,
 		update_working_filter => working_update,
 		best_filter => best_coeffs,				
-		the_best_residual => open,
-		current_residual => open,
-		myPresentState => open,
-		myNextState => open
+		the_best_residual => observe_the_best_residual,
+		current_residual => observe_current_residual,
+		myPresentState => observe_myPresentState,
+		myNextState => observe_myNextState
     );	
 
 HISTORY0: register_input_history

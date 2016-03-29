@@ -41,54 +41,67 @@ Data Sheet report:
 All values displayed in nanoseconds (ns)
 
 Setup/Hold to clock sys_clk_50
-------------+------------+------------+------------------+--------+
-            |Max Setup to|Max Hold to |                  | Clock  |
-Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
-------------+------------+------------+------------------+--------+
-async_ae    |    4.070(R)|   -1.846(R)|sys_clk_20        |   0.000|
-async_oe    |    4.348(R)|   -2.068(R)|sys_clk_20        |   0.000|
-databus<0>  |    3.176(R)|   -1.534(R)|sys_clk_20        |   0.000|
-databus<1>  |    4.027(R)|   -2.215(R)|sys_clk_20        |   0.000|
-databus<2>  |    3.670(R)|   -1.929(R)|sys_clk_20        |   0.000|
-databus<3>  |    3.668(R)|   -1.927(R)|sys_clk_20        |   0.000|
-databus<4>  |    3.509(R)|   -1.797(R)|sys_clk_20        |   0.000|
-databus<5>  |    3.608(R)|   -1.877(R)|sys_clk_20        |   0.000|
-databus<6>  |    3.197(R)|   -1.550(R)|sys_clk_20        |   0.000|
-databus<7>  |    3.512(R)|   -1.802(R)|sys_clk_20        |   0.000|
-nInt        |    3.539(R)|   -1.496(R)|sys_clk_20        |   0.000|
-reset       |   10.415(R)|   -1.536(R)|sys_clk_20        |   0.000|
-------------+------------+------------+------------------+--------+
+------------+------------+------------+--------------------------+--------+
+            |Max Setup to|Max Hold to |                          | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)         | Phase  |
+------------+------------+------------+--------------------------+--------+
+async_ae    |    3.905(R)|   -1.718(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+async_oe    |    4.272(R)|   -2.007(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<0>  |    4.247(R)|   -2.404(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<1>  |    4.544(R)|   -2.641(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<2>  |    4.224(R)|   -2.381(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<3>  |    4.208(R)|   -2.368(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<4>  |    4.556(R)|   -2.647(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<5>  |    4.264(R)|   -2.413(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<6>  |    3.962(R)|   -2.175(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+databus<7>  |    4.260(R)|   -2.413(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+nInt        |    3.535(R)|   -1.492(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+reset       |   11.775(R)|   -2.326(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+------------+------------+------------+--------------------------+--------+
 
 Clock sys_clk_50 to Pad
-------------+------------+------------------+--------+
-            | clk (edge) |                  | Clock  |
-Destination |   to PAD   |Internal Clock(s) | Phase  |
-------------+------------+------------------+--------+
-nRD         |    7.197(R)|sys_clk_20        |   0.000|
-nSH         |    7.924(R)|sys_clk_20        |   0.000|
-out_dac_l   |    7.107(R)|sys_clk_20        |   0.000|
-out_dac_r   |    7.120(R)|sys_clk_20        |   0.000|
-s0          |    5.550(R)|sys_clk_20        |   0.000|
-s1          |    4.903(R)|sys_clk_20        |   0.000|
-------------+------------+------------------+--------+
+----------------------+------------+--------------------------+--------+
+                      | clk (edge) |                          | Clock  |
+Destination           |   to PAD   |Internal Clock(s)         | Phase  |
+----------------------+------------+--------------------------+--------+
+end_serializer        |    7.405(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+nRD                   |    8.165(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+nSH                   |    8.608(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+out_dac_l             |    7.064(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+out_dac_r             |    8.801(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+s0                    |    5.265(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+s1                    |    4.566(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+serial_left_1         |    5.425(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+serial_left_2         |    5.716(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+serial_right_1        |    6.226(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+serial_right_2        |    5.626(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+trigger_on_sample_tick|   11.299(R)|trigger_on_sys_clk_20_OBUF|   0.000|
+----------------------+------------+--------------------------+--------+
 
 Clock to Setup on destination clock sys_clk_50
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sys_clk_50     |    8.670|         |         |         |
+sys_clk_50     |   10.380|         |         |         |
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+---------------+---------------------+---------+
+Source Pad     |Destination Pad      |  Delay  |
+---------------+---------------------+---------+
+sys_clk_50     |trigger_on_sys_clk_20|    7.619|
+---------------+---------------------+---------+
 
-Analysis completed Wed Mar 16 20:43:13 2016 
+
+Analysis completed Tue Mar 29 09:49:34 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 195 MB
+Peak Memory Usage: 205 MB
 
 
 

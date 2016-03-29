@@ -8,7 +8,7 @@
 --
 --  Revision History:
 -- 	 3/16/2016 Sushant Sundaresh created
---
+-- 	 3/28/2016 Sushant Sundaresh added serializer debugging block
 ----------------------------------------------------------------------------
 
 --{{ Section below this comment is automatically maintained
@@ -60,8 +60,18 @@ entity  system_wiring  is
 		out_dac_r : out std_logic;		
 				
 		-- System Clock
-		sys_clk_50 : in std_logic
+		sys_clk_50 : in std_logic;
 						-- Pin B8
+						
+		-- Serializer Debug Lines, Combinational
+		trigger_on_sys_clk_20 : out std_logic; -- simply sys_clk_20 made visible
+		trigger_on_sample_tick : out std_logic; -- simple the 40kHz tick made visible
+		end_serializer : out std_logic; 
+		serial_left_1 : out std_logic;
+		serial_left_2 : out std_logic;
+		serial_right_1 : out std_logic;
+		serial_right_2 : out std_logic
+	
     );
 end  system_wiring;
 
@@ -75,6 +85,23 @@ architecture  structural  of  system_wiring  is
           CLKIN_IBUFG_OUT : out   std_logic; 
           CLK0_OUT        : out   std_logic);
 	end component;
+
+	component  block_serializer
+		 port (			
+			reset : in std_logic;
+			sys_clk : in std_logic;
+			sample_tick : in std_logic;				
+			end_serialization : out std_logic;
+			input_register_1 : in std_logic_vector(0 to toSerialize);		
+			input_register_2 : in std_logic_vector(0 to toSerialize);		
+			input_register_3 : in std_logic_vector(0 to toSerialize);		
+			input_register_4 : in std_logic_vector(0 to toSerialize);					
+			serial_1 : out std_logic;
+			serial_2 : out std_logic;
+			serial_3 : out std_logic;
+			serial_4 : out std_logic
+		 );
+	end  component;
 
 	component block_filter_pair
 		 port (
@@ -102,7 +129,21 @@ architecture  structural  of  system_wiring  is
 			left_best_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
 			right_best_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
 			left_working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
-			right_working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY	
+			right_working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
+		
+			left_best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+			right_best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+			left_working_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+			right_working_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+			
+			left_input_history : out HISTORY_REGISTER_ARRAY;
+			right_input_history : out HISTORY_REGISTER_ARRAY;
+			
+			left_current_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE;
+			right_current_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE;
+			
+			left_next_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE;
+			right_next_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE
 		 );
 	end component;
 
@@ -180,8 +221,7 @@ architecture  structural  of  system_wiring  is
 	-- Sample Pulses
 	signal sample_tick, oversample_tick : std_logic;	
 
-	-- Sample Wiring
-	signal dac_in : std_logic_vector(0 to 7);	
+	-- Sample Wiring	
 		
 	-- Adaptation Enable synchronization
 	-- Output Enable synchronization
@@ -204,8 +244,30 @@ architecture  structural  of  system_wiring  is
 	-- Clock Management
 	signal sys_clk_20 : std_logic;
 		
-begin
+	-- Serial Debugging
+	signal serial_ir_left_1, serial_ir_left_2, serial_ir_right_1, serial_ir_right_2 : std_logic_vector(0 to toSerialize);
+
+	signal left_best_filter_coefficients : COEFFICIENT_REGISTER_ARRAY;
+	signal right_best_filter_coefficients : COEFFICIENT_REGISTER_ARRAY;
+	signal left_working_filter_coefficients : COEFFICIENT_REGISTER_ARRAY;
+	signal right_working_filter_coefficients : COEFFICIENT_REGISTER_ARRAY;
+
+	signal left_best_residual : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+	signal right_best_residual : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+	signal left_working_residual : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+	signal right_working_residual : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
 	
+	signal left_input_history : HISTORY_REGISTER_ARRAY;
+	signal right_input_history : HISTORY_REGISTER_ARRAY;
+	
+	signal left_current_fsm_state : FSM_FILTER_UPDATE_BLOCK_STATE;
+	signal right_current_fsm_state : FSM_FILTER_UPDATE_BLOCK_STATE;
+	
+	signal left_next_fsm_state : FSM_FILTER_UPDATE_BLOCK_STATE;
+	signal right_next_fsm_state : FSM_FILTER_UPDATE_BLOCK_STATE;
+	
+begin
+
 	-- Synchronize OE,AE Inputs.
 	oe <= daisyChain_oe(2);
 	ae <= daisyChain_ae(2);
@@ -249,8 +311,86 @@ begin
 			count => open,
 			finalCarry => sample_tick
 			);
+	
+	-- Serial Debugger Wiring
+	assignSerialIR: process (left_best_filter_coefficients, right_best_filter_coefficients, left_working_filter_coefficients, right_working_filter_coefficients, left_best_residual, right_best_residual, left_working_residual, right_working_residual, left_input_history, right_input_history, left_current_fsm_state, right_current_fsm_state, left_next_fsm_state, right_next_fsm_state)
+	begin
+	
+		for I in 0 to (FILTER_FIR_LENGTH-1) loop
+			-- Assign Working Coefficients
+			serial_ir_left_1(I*FILTER_COEFFICIENT_BITS to (((I+1)*FILTER_COEFFICIENT_BITS)-1)) <= left_working_filter_coefficients(I);
+			serial_ir_right_1(I*FILTER_COEFFICIENT_BITS to (((I+1)*FILTER_COEFFICIENT_BITS)-1)) <= right_working_filter_coefficients(I);
+			
+			-- Assign Input History	
+			serial_ir_left_2(I*ADC_DATA_BITS to (((I+1)*ADC_DATA_BITS)-1)) <= left_input_history(I);
+			serial_ir_right_2(I*ADC_DATA_BITS to (((I+1)*ADC_DATA_BITS)-1)) <= right_input_history(I);
+		end loop;
+		-- Now index is at (FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS)	for (1)
+		-- Now index is at (FILTER_FIR_LENGTH*ADC_DATA_BITS) for (2)		
+		
+		-- Assign Best Coefficients (half-half)
+		for I in 0 to (HALF_FILTER_FIR_LENGTH-1) loop
+			serial_ir_left_1(FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS+I*FILTER_COEFFICIENT_BITS to FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS+(((I+1)*FILTER_COEFFICIENT_BITS)-1)) <= left_best_filter_coefficients(I);
+			serial_ir_right_1(FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS+I*FILTER_COEFFICIENT_BITS to FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS+(((I+1)*FILTER_COEFFICIENT_BITS)-1)) <= right_best_filter_coefficients(I);
+			
+			serial_ir_left_2(FILTER_FIR_LENGTH*ADC_DATA_BITS+I*FILTER_COEFFICIENT_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS+(((I+1)*FILTER_COEFFICIENT_BITS)-1)) <= left_best_filter_coefficients(I+HALF_FILTER_FIR_LENGTH);
+			serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS+I*FILTER_COEFFICIENT_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS+(((I+1)*FILTER_COEFFICIENT_BITS)-1)) <= right_best_filter_coefficients(I+HALF_FILTER_FIR_LENGTH);
+		end loop;		
+		-- Now index is at (FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS	for (1)
+		-- Now index is at (FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS for (2)
+		
+		-- Everything else gets assigned to the (2) serial input register (which should have about 100 bits left) 
+		
+		-- Assign Residuals (FILTER_RESIDUAL_ACCUMULATOR_BITS bits each)
+		serial_ir_left_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + FILTER_RESIDUAL_ACCUMULATOR_BITS - 1) <= left_best_residual;
+		serial_ir_left_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + FILTER_RESIDUAL_ACCUMULATOR_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS -1) <= left_working_residual;
+		serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + FILTER_RESIDUAL_ACCUMULATOR_BITS - 1) <= right_best_residual;
+		serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + FILTER_RESIDUAL_ACCUMULATOR_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS -1) <= right_working_residual;
+		
+		-- Now (2) is at index FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS
+		
+		-- Assign Filter Output (ADC_DATA_BITS each)
+		serial_ir_left_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS - 1) <= left_spk_dac_input;		
+		serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS - 1) <= right_spk_dac_input;				
+		
+		-- Now (2) is at index FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS
+		
+		-- Assign Filter FSM State (FSM_FILTER_UPDATE_BLOCK_STATE_BITS bits each)
+		serial_ir_left_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + FSM_FILTER_UPDATE_BLOCK_STATE_BITS - 1) <= left_current_fsm_state;		
+		serial_ir_left_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + FSM_FILTER_UPDATE_BLOCK_STATE_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS - 1) <= left_next_fsm_state;
 
-	myADC:  fsm_adc
+		serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + FSM_FILTER_UPDATE_BLOCK_STATE_BITS - 1) <= right_current_fsm_state;		
+		serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + FSM_FILTER_UPDATE_BLOCK_STATE_BITS to FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS - 1) <= right_next_fsm_state;
+		
+		-- Now (2) is at index FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE
+		-- At our current numbers this is 448 bits in (2) and 432 in (1), well within the 510 bits we could transmit in a sample_tick
+		
+		-- For now, fill in the rest with zeros
+		serial_ir_left_1(FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize) <= (FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize => '0');
+		serial_ir_left_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize) <= (FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize => '0');
+		serial_ir_right_1(FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize) <= (FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize => '0');
+		serial_ir_right_2(FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize) <= (FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize => '0');		
+
+	end process assignSerialIR;
+	trigger_on_sys_clk_20 <= sys_clk_20;
+	trigger_on_sample_tick <= sample_tick;	
+	DebugSerializer: block_serializer
+		 port map (			
+			reset => reset, 
+			sys_clk => sys_clk_20,
+			sample_tick => sample_tick,
+			end_serialization => end_serializer,
+			input_register_1 => serial_ir_left_1, 
+			input_register_2 => serial_ir_left_2, 
+			input_register_3 => serial_ir_right_1, 
+			input_register_4 => serial_ir_right_2, 
+			serial_1 => serial_left_1,
+			serial_2 => serial_left_2,
+			serial_3 => serial_right_1,
+			serial_4 => serial_right_2
+		 );
+	
+	myADC:  fsm_adc 
 		 port map (
 			sys_clk => sys_clk_20,
 			sample_tick => sample_tick, 
@@ -317,10 +457,20 @@ begin
 			right_mic_error_adc_output => right_mic_error_adc_output,
 			left_spk_dac_input => left_spk_dac_input,
 			right_spk_dac_input => right_spk_dac_input,			
-			left_best_filter_coefficients => open,
-			right_best_filter_coefficients => open,
-			left_working_filter_coefficients => open,
-			right_working_filter_coefficients => open
+			left_best_filter_coefficients => left_best_filter_coefficients,
+			right_best_filter_coefficients => right_best_filter_coefficients,
+			left_working_filter_coefficients => left_working_filter_coefficients,
+			right_working_filter_coefficients => right_working_filter_coefficients,			
+			left_best_residual => left_best_residual,
+			right_best_residual => right_best_residual,
+			left_working_residual => left_working_residual,
+			right_working_residual => right_working_residual,			
+			left_input_history => left_input_history,
+			right_input_history => right_input_history,		
+			left_current_fsm_state => left_current_fsm_state,
+			right_current_fsm_state => right_current_fsm_state,			
+			left_next_fsm_state => left_next_fsm_state,
+			right_next_fsm_state => right_next_fsm_state
 		 );	
 
 

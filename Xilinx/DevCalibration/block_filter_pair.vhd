@@ -49,7 +49,21 @@ entity  block_filter_pair  is
 		left_best_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
 		right_best_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;		
 		left_working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
-		right_working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY	
+		right_working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;	
+		
+		left_best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		right_best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		left_working_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		right_working_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		
+		left_input_history : out HISTORY_REGISTER_ARRAY;
+		right_input_history : out HISTORY_REGISTER_ARRAY;
+		
+		left_current_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE;
+		right_current_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE;
+		
+		left_next_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE;
+		right_next_fsm_state : out FSM_FILTER_UPDATE_BLOCK_STATE
     );
 end  block_filter_pair;
 
@@ -133,7 +147,12 @@ component block_filter
 		
 		-- Test Outputs: leave open -- 
 		best_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
-		working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY
+		working_filter_coefficients : out COEFFICIENT_REGISTER_ARRAY;
+		observe_input_history_registers : out HISTORY_REGISTER_ARRAY;
+		observe_the_best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		observe_current_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+		observe_myPresentState : out FSM_FILTER_UPDATE_BLOCK_STATE;
+		observe_myNextState : out FSM_FILTER_UPDATE_BLOCK_STATE
     );
 end component;
 
@@ -217,9 +236,14 @@ LEFTFILTER: block_filter
 		mic_error_adc_output => left_mic_error_adc_output,
 		spk_dac_input => left_spk_dac_input,
 		best_filter_coefficients => left_best_filter_coefficients,
-		working_filter_coefficients => left_working_filter_coefficients
+		working_filter_coefficients => left_working_filter_coefficients,
+		observe_input_history_registers => left_input_history,
+		observe_the_best_residual => left_best_residual,
+		observe_current_residual => left_working_residual,
+		observe_myPresentState => left_current_fsm_state,
+		observe_myNextState => left_next_fsm_state
     );
-	 
+
 -- Instantiate Right Filter Block --
 RIGHTFILTER: block_filter
     port map (			
@@ -241,7 +265,12 @@ RIGHTFILTER: block_filter
 		mic_error_adc_output => right_mic_error_adc_output,
 		spk_dac_input => right_spk_dac_input,
 		best_filter_coefficients => right_best_filter_coefficients,
-		working_filter_coefficients => right_working_filter_coefficients
+		working_filter_coefficients => right_working_filter_coefficients,
+		observe_input_history_registers => right_input_history,
+		observe_the_best_residual => right_best_residual,
+		observe_current_residual => right_working_residual,
+		observe_myPresentState => right_current_fsm_state,
+		observe_myNextState => right_next_fsm_state
     );
 
 end  dataflow;

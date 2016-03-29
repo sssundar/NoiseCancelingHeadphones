@@ -18,5 +18,6 @@ vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\Dev
 vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\clock_divider.vhd"
 vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\fsm_adc.vhd"
 vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\dac_single.vhd"
+vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\block_serializer.vhd"
 vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\block_filter_pair.vhd"
 vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\system_wiring.vhd"

@@ -16,6 +16,23 @@ NET "nSH" SLEW = FAST;
 NET "s0" SLEW = FAST;
 NET "s1" SLEW = FAST;
 
+NET "trigger_on_sys_clk_20" IOSTANDARD = LVCMOS33;
+NET "trigger_on_sample_tick" IOSTANDARD = LVCMOS33;
+NET "end_serializer" IOSTANDARD = LVCMOS33;
+NET "serial_left_1" IOSTANDARD = LVCMOS33;
+NET "serial_left_2" IOSTANDARD = LVCMOS33;
+NET "serial_right_1" IOSTANDARD = LVCMOS33;
+NET "serial_right_2" IOSTANDARD = LVCMOS33;
+
+NET "trigger_on_sys_clk_20" SLEW = FAST;
+NET "trigger_on_sample_tick" SLEW = FAST;
+NET "end_serializer" SLEW = FAST;
+NET "serial_left_1" SLEW = FAST;
+NET "serial_left_2" SLEW = FAST;
+NET "serial_right_1" SLEW = FAST;
+NET "serial_right_2" SLEW = FAST;
+
+
 NET "reset" IOSTANDARD = LVCMOS25;
 NET "async_oe" IOSTANDARD = LVCMOS25;
 NET "async_ae" IOSTANDARD = LVCMOS25;
@@ -44,6 +61,14 @@ NET "databus[6]" IOSTANDARD = LVCMOS33;
 NET "databus[7]" IOSTANDARD = LVCMOS33;
 
 # PlanAhead Generated physical constraints 
+
+NET "trigger_on_sys_clk_20" LOC = M13;
+NET "trigger_on_sample_tick" LOC = R18;
+NET "end_serializer" LOC = R15;
+NET "serial_left_1" LOC = J13;
+NET "serial_left_2" LOC = M18;
+NET "serial_right_1" LOC = N18;
+NET "serial_right_2" LOC = P18;
 
 NET "reset" LOC = L13;
 NET "async_oe" LOC = N17;
