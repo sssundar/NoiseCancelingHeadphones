@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------
 --
---  FSM to load next samples/errors from DAC block, then copy working input history/filter coefficients to 
+--  FSM to load next samples/errors from ADC block, then copy working input history/filter coefficients to 
 --  convolution block, then trigger filter update block and convolution.
 --
 --  Inputs: 	
