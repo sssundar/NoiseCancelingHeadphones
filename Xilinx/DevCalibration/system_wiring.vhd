@@ -7,8 +7,11 @@
 --     system_wiring
 --
 --  Revision History:
--- 	 3/16/2016 Sushant Sundaresh created
--- 	 3/28/2016 Sushant Sundaresh added serializer debugging block
+-- 	 3/16/2016 Sushant Sundaresh 	created
+-- 	 3/28/2016 Sushant Sundaresh 	added serializer debugging block
+--     4/2/2016  Sushant Sundaresh 	added error sample to serializer
+--     4/2/2016  Sushant Sundaresh 	added LEDs for reset, oe-sync, ae-sync, 
+-- 											and l_residual_0, r_residual_0
 ----------------------------------------------------------------------------
 
 --{{ Section below this comment is automatically maintained
@@ -26,6 +29,12 @@ entity  system_wiring  is
 		reset : in std_logic;		 					-- Switch 5, active high
 		async_oe : in std_logic;								-- Switch 6, active high		
 		async_ae : in std_logic; 								-- Switch 3, active high
+		
+		led_oe : out std_logic; 		-- synchronous oe
+		led_ae : out std_logic;  		-- synchronous ae
+		led_reset : out std_logic; 	-- asynchronous reset
+		led_left_best_residual_0 : out std_logic; -- synchronous best_residuals
+		led_right_best_residual_0 : out std_logic;
 		
 		-- ADC IO
 		nInt 			: in std_logic;	-- interrupt, active low, asynchronous		
@@ -273,7 +282,7 @@ begin
 	oe <= daisyChain_oe(2);
 	ae <= daisyChain_ae(2);
 	may_update_filter <= '1' when ((oe = '1') and (ae = '1')) else '0';
-	
+		
 	process (sys_clk_20) 
 	begin	
 		if (rising_edge(sys_clk_20)) then			
@@ -281,6 +290,13 @@ begin
 			daisyChain_ae(2 downto 0) <= daisyChain_ae(1 downto 0) & async_ae; 
 		end if;
 	end process;
+	
+	-- Assign LEDs
+	led_oe <= oe;
+	led_ae <= ae;
+	led_reset <= reset;
+	led_left_best_residual_0 <= '1' when (std_match(left_best_residual, (0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1) => '0'))) else '0';
+	led_right_best_residual_0 <= '1' when (std_match(right_best_residual, (0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1) => '0'))) else '0';
 	
 	-- Clock		
 	ClockManager: clock_divider
@@ -372,13 +388,19 @@ begin
 		serial_ir_right_2(4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + FSM_FILTER_UPDATE_BLOCK_STATE_BITS to 4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS - 1) <= right_next_fsm_state;
 		
 		-- Now (2) is at index 4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE
-		-- At our current numbers this is 448 bits in (2) and 432 in (1), well within the 510 bits we could transmit in a sample_tick
+		
+		-- Assign Error Samples (L, R) latched for the NEXT tick
+		serial_ir_left_2(4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to 4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS + ADC_DATA_BITS - 1) <= left_mic_error_adc_output;
+		serial_ir_right_2(4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to 4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS + ADC_DATA_BITS - 1) <= right_mic_error_adc_output;
+			
+		-- Now (2) is at 4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE to 4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + 2*ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS
+		-- At our current numbers this is 456 bits in (2) and 432 in (1), well within the 510 bits we could transmit in a sample_tick
 		
 		-- For now, fill in the rest with zeros
 		serial_ir_left_1(4+FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize) <= (4+ FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize => '0');
-		serial_ir_left_2(4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize) <= (4+ FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize => '0');
+		serial_ir_left_2(4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + 2*ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize) <= (4+ FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + 2*ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize => '0');
 		serial_ir_right_1(4+FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize) <= (4+ FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS to toSerialize => '0');
-		serial_ir_right_2(4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize) <= (4+ FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize => '0');		
+		serial_ir_right_2(4+FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + 2*ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize) <= (4+ FILTER_FIR_LENGTH*ADC_DATA_BITS + HALF_FILTER_FIR_LENGTH*FILTER_COEFFICIENT_BITS + 2*FILTER_RESIDUAL_ACCUMULATOR_BITS + 2*ADC_DATA_BITS + 2*FSM_FILTER_UPDATE_BLOCK_STATE_BITS to toSerialize => '0');		
 
 	end process assignSerialIR;
 	

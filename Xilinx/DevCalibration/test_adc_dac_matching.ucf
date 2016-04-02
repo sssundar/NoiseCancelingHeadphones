@@ -7,6 +7,12 @@ NET "sys_clk_50" LOC = B8;
 
 NET "nInt" IOSTANDARD = LVCMOS33;
 
+NET "led_oe" IOSTANDARD = LVCMOS33;
+NET "led_ae" IOSTANDARD = LVCMOS33;
+NET "led_reset" IOSTANDARD = LVCMOS33;
+NET "led_left_best_residual_0" IOSTANDARD = LVCMOS33;
+NET "led_right_best_residual_0" IOSTANDARD = LVCMOS33;
+
 NET "s0" IOSTANDARD = LVCMOS33;
 NET "s1" IOSTANDARD = LVCMOS33;
 NET "nRD" IOSTANDARD = LVCMOS33;
@@ -70,6 +76,12 @@ NET "serial_left_2" LOC = M18;
 NET "serial_right_1" LOC = N18;
 NET "serial_right_2" LOC = P18;
 
+NET "led_oe" LOC = E4;
+NET "led_ae" LOC = K14;
+NET "led_reset" LOC = P16;
+NET "led_left_best_residual_0" LOC = J15;
+NET "led_right_best_residual_0" LOC = J14;
+		
 NET "reset" LOC = L13;
 NET "async_oe" LOC = N17;
 NET "async_ae" LOC = K17;

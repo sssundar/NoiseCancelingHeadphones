@@ -81,27 +81,7 @@ begin
 	        
     process		
     begin  
-		
-		-- Sanity Checks Attempted
-		-- Reset toggle with oe, ae inactive -> after on tick, best residuals are high
-		-- Reset with oe, ae active -> after one tick, best residuals are high
-		-- Reset with oe, ae active -> after 65 ticks, best residuals are 64 (errors fixed at 1)
-		-- Reset with oe, ae inactive -> after 65 ticks, best residuals are high, unchanged, working residuals are 0
-		-- Reset with oe, ae inactive, then at the end just before we'd hit an update interval, activate them - best residuals stay high
-		
-		-- It seems quite unlikely to me that an error mic would see ALL zero inputs for 64 samples straight, on both filter blocks.
-		-- That's silly. 
-		
-		-- Try running the current code with reset toggled on with oe/ae active from the start
-		-- Try swapping the input, error mics, just to see what happens with a stronger signal
-		-- Do this a few times, with a noise source NEAR the mics. HUM if you need to.
-		-- Try synchronizing the reset input line
-		-- Make sure the outputs are at least different between the left, right filters
-		-- Serialize the input error, too
-		-- Try toggling the reset while capturing - with luck you'll catch the zero-best happening, and can sanity-check whether it's SUPPOSED to be happening given the inputs
-		
-		-- Write a simple "count runs of 0 error in's module" and serialize the output on sample_ticks.
-		
+				
 		reset <= '1';
 		oe <= '0';
 		ae <= '0';
@@ -111,17 +91,22 @@ begin
 		wait for 5 ns;
 		
 		-- Visually watch state evolution for a sample tick
-		for i in 1 to 512*64 loop
+		for i in 1 to 512*10 loop
 			wait for 100 ns;			
 		end loop;
 		
-		oe <= '1';
-		ae <= '1';
-		
-		for i in 1 to 512 loop 
-			wait for 100 ns;
+		oe <= '1';						
+
+		for i in 1 to 512*10 loop
+			wait for 100 ns;			
 		end loop;
-					
+		
+		ae <= '1';
+
+		for i in 1 to 512*65 loop
+			wait for 100 ns;			
+		end loop;
+							
 		END_SIM <= TRUE;
 		wait;
 		
