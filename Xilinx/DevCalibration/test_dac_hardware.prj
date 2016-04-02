@@ -1,6 +1,0 @@
-vhdl work "AddSub.vhd"
-vhdl work "kBitCounter.vhd"
-vhdl work "clock_divider.vhd"
-vhdl work "generator_sine.vhd"
-vhdl work "dac_single.vhd"
-vhdl work "test_dac_hardware.vhd"

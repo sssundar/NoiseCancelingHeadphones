@@ -1,3 +1,0 @@
-vhdl isim_temp "AddSub.vhd"
-vhdl isim_temp "dac_single.vhd"
-vhdl isim_temp "test_dac_single.vhd"

@@ -1,6 +1,0 @@
-vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\AddSub.vhd"
-vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\kBitCounter.vhd"
-vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\clock_divider.vhd"
-vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\generator_sine.vhd"
-vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\dac_single.vhd"
-vhdl work "D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\test_dac_hardware.vhd"

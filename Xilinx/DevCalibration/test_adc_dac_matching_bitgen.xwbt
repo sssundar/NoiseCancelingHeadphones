@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\test_adc_dac_matching.ncd
-OUTFILE=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration\test_adc_dac_matching.bit
-FAMILY=Spartan3E
-PART=xc3s1200e-4fg320
-WORKINGDIR=D:\Users\Sushant\Documents\GitHub\NoiseCancelingHeadphones\Xilinx\DevCalibration
-LICENSE=WebPack
-USER_INFO=211010628_0_0_052
