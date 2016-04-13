@@ -26,6 +26,7 @@ package magic_numbers is
 	
 	-- level shifter constant value added to ADC inputs to shift from 0..2^ADC_DATA_BITS-1 to -2^(ADC_DATA_BITS-1) .. 2^(ADC_DATA_BITS-1)-1
 	-- not necessary, just flip MSB	
+
 	constant ADC_CONTROL_BITS : integer := 3;
 	constant ADC_REQUEST_READ : std_logic := '0'; -- active low control signal
 	constant ADC_REQUEST_SAMPLE : std_logic := '0'; -- active low control signal
@@ -120,8 +121,8 @@ package magic_numbers is
 	
 	-- number of samples before filter is updated in random walk. 
 	-- required to be a power of two for simple recognition in counters.
-	constant FILTER_UPDATE_INTERVAL : integer := 2 * FILTER_FIR_LENGTH;
-	constant LOG2_UPDATE_INTERVAL : integer := 6;	
+	constant FILTER_UPDATE_INTERVAL : integer := 512;
+	constant LOG2_UPDATE_INTERVAL : integer := 9;	
 	constant FILTER_UPDATE_INTERVAL_COUNTER_BITS : integer := LOG2_UPDATE_INTERVAL;	
 
 	-- number of additional bits required in filter convolution accumulator, which adds FILTER_FIR_LENGTH numbers of bitlength ADC_DATA_BITS + FILTER_SHIFT_MULTIPLIER_PRECISION_BITS

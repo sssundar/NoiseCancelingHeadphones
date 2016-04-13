@@ -12,6 +12,7 @@
 --     4/2/2016  Sushant Sundaresh 	added error sample to serializer
 --     4/2/2016  Sushant Sundaresh 	added LEDs for reset, oe-sync, ae-sync, 
 -- 											and l_residual_0, r_residual_0
+--  	 4/12/2016 Sushant Sundaresh  updated serializer for more filter update samples
 ----------------------------------------------------------------------------
 
 --{{ Section below this comment is automatically maintained
