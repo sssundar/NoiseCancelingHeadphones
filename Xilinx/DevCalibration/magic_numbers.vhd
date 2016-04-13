@@ -76,23 +76,25 @@ package magic_numbers is
 	constant FSM_CAS_OUTPUT_HOT_INDEX : integer := 0;
 	
 	-- Filter Update Block FSM States
-	subtype  FSM_FILTER_UPDATE_BLOCK_STATE is std_logic_vector(0 to 6);
-	constant FSM_FILTER_UPDATE_BLOCK_STATE_BITS : integer := 7;
-	constant FSM_FUB_WAIT : 		FSM_FILTER_UPDATE_BLOCK_STATE := "1000000";
-	constant FSM_FUB_ABS : 			FSM_FILTER_UPDATE_BLOCK_STATE := "0100000";
-	constant FSM_FUB_ADD : 			FSM_FILTER_UPDATE_BLOCK_STATE := "0010000";
-	constant FSM_FUB_CMP : 			FSM_FILTER_UPDATE_BLOCK_STATE := "0001000";
-	constant FSM_FUB_UPD_BEST : 	FSM_FILTER_UPDATE_BLOCK_STATE := "0000100";
-	constant FSM_FUB_WIPE : 		FSM_FILTER_UPDATE_BLOCK_STATE := "0000010";
-	constant FSM_FUB_STEP : 		FSM_FILTER_UPDATE_BLOCK_STATE := "0000001";
+	constant FSM_FILTER_UPDATE_BLOCK_STATE_BITS : integer := 8;
+	subtype  FSM_FILTER_UPDATE_BLOCK_STATE is std_logic_vector(0 to FSM_FILTER_UPDATE_BLOCK_STATE_BITS-1);	
+	constant FSM_FUB_WAIT : 		FSM_FILTER_UPDATE_BLOCK_STATE := "10000000";
+	constant FSM_FUB_ABS : 			FSM_FILTER_UPDATE_BLOCK_STATE := "01000000";
+	constant FSM_FUB_ADD : 			FSM_FILTER_UPDATE_BLOCK_STATE := "00100000";
+	constant FSM_FUB_CMP : 			FSM_FILTER_UPDATE_BLOCK_STATE := "00010000";
+	constant FSM_FUB_UPD_BEST : 	FSM_FILTER_UPDATE_BLOCK_STATE := "00001000";
+	constant FSM_FUB_FRGT_BEST : 	FSM_FILTER_UPDATE_BLOCK_STATE := "00000100";
+	constant FSM_FUB_WIPE : 		FSM_FILTER_UPDATE_BLOCK_STATE := "00000010";
+	constant FSM_FUB_STEP : 		FSM_FILTER_UPDATE_BLOCK_STATE := "00000001";
 	
 	constant FSM_FUB_WAIT_INDEX : 		integer := 0;
 	constant FSM_FUB_ABS_INDEX : 			integer := 1;
 	constant FSM_FUB_ADD_INDEX : 			integer := 2;
 	constant FSM_FUB_CMP_INDEX : 			integer := 3;
 	constant FSM_FUB_UPD_BEST_INDEX : 	integer := 4;	
-	constant FSM_FUB_WIPE_INDEX : 		integer := 5;
-	constant FSM_FUB_STEP_INDEX : 		integer := 6;
+	constant FSM_FUB_FRGT_BEST_INDEX : 	integer := 5;
+	constant FSM_FUB_WIPE_INDEX : 		integer := 6;
+	constant FSM_FUB_STEP_INDEX : 		integer := 7;
 	
 	
 	-- Number of bits, filter block, filter coefficients. 
@@ -145,11 +147,6 @@ package magic_numbers is
 	
 	-- Subtypes of array for passing around input history arrays
 	type HISTORY_REGISTER_ARRAY is array (0 to (FILTER_FIR_LENGTH-1)) of std_logic_vector(0 to (ADC_DATA_BITS-1)); 
-	
-	---------------
-	-- DAC Block --
-	---------------
-	
 	
 	
 	---------------

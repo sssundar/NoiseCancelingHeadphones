@@ -95,12 +95,15 @@ architecture  dataflow  of  fsm_update_filter  is
 			sys_clk : in std_logic; 						-- clock input
 			
 			load_residual_accumulator : in std_logic; -- active high, load the residual accumulator into this register
+			slowly_forget_best_residual :in std_logic; -- active high, load the slow_forget_data
+			
 			load_data : in std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1)); 
-						
-			best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS - 1))
-        );                                               
+			slow_forget_data : in std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1)); 
+			
+			best_residual : out std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS - 1))        
+		);    
 	end component;
-	
+			 
 	component AddSub
 		port (
 			A, B    :  in  std_logic;       --  to add, subtract
@@ -136,8 +139,13 @@ architecture  dataflow  of  fsm_update_filter  is
 	signal res_sum : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1)); 
 	signal clearResAccum : std_logic;
 	
+	-- best residual memory "forgetting" incrementor sum, carries
+	signal mem_sum : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1)); 
+	signal mem_carrys : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1)); 
+	
 	-- best residual register control lines
 	signal load_residual_accumulator : std_logic;
+	signal slowly_forget_best_residual : std_logic;
 	
 	-- comparison carry/sum holders
 	signal cmp_carrys : std_logic_vector(0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS-1)); 
@@ -203,12 +211,22 @@ begin
 			count => open,
 			finalCarry => isErrorSampleCounterDone
 			);
+
+	-- best residual + 1, to forget best residual over time (if no one beats it)
+	ResMemoryFinal: AddSub port map (bestResidual(FILTER_RESIDUAL_ACCUMULATOR_BITS-1), '0', '0', '1', mem_sum(FILTER_RESIDUAL_ACCUMULATOR_BITS-1), mem_carrys(FILTER_RESIDUAL_ACCUMULATOR_BITS-1));
+	ResMemoryGen:
+	for i in 0 to (FILTER_RESIDUAL_ACCUMULATOR_BITS - 2) generate
+	  ResMemoryX: AddSub port map (bestResidual(i), '0', '0', mem_carrys(i+1), mem_sum(i), mem_carrys(i));
+	end generate;	
+
 	bestRes: register_best_residual
     port map (	  
 			reset => reset,
 			sys_clk => sys_clk, 			
 			load_residual_accumulator => load_residual_accumulator,
+			slowly_forget_best_residual => slowly_forget_best_residual,
 			load_data => residual_accumulated,						
+			slow_forget_data => mem_sum,
 			best_residual => bestResidual
         );                                               	
 
@@ -238,6 +256,7 @@ begin
 	update_working_filter <= '1' when (PresentState(FSM_FUB_STEP_INDEX) = '1') else '0';
 	clearResAccum <= '1' when ( (reset = '1') or (PresentState(FSM_FUB_WIPE_INDEX) = '1') ) else '0';
 	load_residual_accumulator <= '1' when (PresentState(FSM_FUB_UPD_BEST_INDEX) = '1') else '0';
+	slowly_forget_best_residual <= '1' when (PresentState(FSM_FUB_FRGT_BEST_INDEX) = '1') else '0';
 	
 	-- Please see Block Diagrams in Electronic Submission for State Transitions --
 	fsm_filter_update_NextStateCalc: process (PresentState, isErrorSampleCounterDone, trigger, reset, shouldUpdate, isBestFilterStillBest)
@@ -262,13 +281,17 @@ begin
 		
 		if ( (PresentState(FSM_FUB_CMP_INDEX) = '1') and (reset = '0') ) then
 			if (isBestFilterStillBest = '1') then			
-				NextState <= FSM_FUB_WIPE;			
+				NextState <= FSM_FUB_FRGT_BEST;
 			else 
 				NextState <= FSM_FUB_UPD_BEST;			
 			end if;
 		end if;
 		
 		if ( (PresentState(FSM_FUB_UPD_BEST_INDEX) = '1') and (reset = '0') ) then			
+			NextState <= FSM_FUB_WIPE;						
+		end if;
+		
+		if ( (PresentState(FSM_FUB_FRGT_BEST_INDEX) = '1') and (reset = '0') ) then			
 			NextState <= FSM_FUB_WIPE;						
 		end if;
 				
